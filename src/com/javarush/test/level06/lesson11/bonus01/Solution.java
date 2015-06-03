@@ -28,6 +28,7 @@ Cat name is сын Мурчик, mother is мама Василиса, father is 
 Cat name is дочь Пушинка, mother is мама Василиса, father is папа Котофей
 */
 
+/**
 public class Solution
 {
     public static void main(String[] args) throws IOException
@@ -94,6 +95,8 @@ public class Solution
     }
 
 }
+*/
+
 /**
 public class Solution
 {

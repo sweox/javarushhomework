@@ -10,6 +10,8 @@ import java.util.List;
 Метод getTimeMsOfGet  должен вернуть время его исполнения в миллисекундах.
 */
 
+
+/**
 public class Solution
 {
     public static void main(String[] args)
@@ -52,3 +54,4 @@ public class Solution
         }
     }
 }
+*/

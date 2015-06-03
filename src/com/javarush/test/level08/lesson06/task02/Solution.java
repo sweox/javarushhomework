@@ -8,6 +8,8 @@ import java.util.List;
 Для arrayList и linkedList провести 10 тысяч вставок, удалений, а также вызовов get и set.
 */
 
+
+/**
 public class Solution
 {
     public static void main(String[] args) throws Exception
@@ -55,3 +57,4 @@ public class Solution
             list.remove(0);
     }
 }
+*/

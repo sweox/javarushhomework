@@ -3,7 +3,8 @@ package com.javarush.test.level09.lesson11.home08;
 import java.util.ArrayList;
 
 /* Список из массивов чисел
-Создать список, элементами которого будут массивы чисел. Добавить в список пять объектов–массивов длиной 5, 2, 4, 7, 0 соответственно. Заполнить массивы любыми данными и вывести их на экран.
+Создать список, элементами которого будут массивы чисел. Добавить в список пять объектов–массивов длиной 5, 2, 4, 7, 0
+соответственно. Заполнить массивы любыми данными и вывести их на экран.
 */
 
 public class Solution
@@ -17,6 +18,17 @@ public class Solution
     public static ArrayList<int[]> createList()
     {
         //Написать тут ваш код
+        //int[] a;
+        //a = new int[]{0, 1, 2, 3, 4};
+        //int[] b = {0, 1};
+        //int[] c = {0, 1, 2, 3};
+        //nt[] d = {0, 1, 2, 3, 4, 5, 6};
+        //int[] e = {};
+        createList().add(new int[]{0, 1, 2, 3, 4});
+        createList().add(new int[]{0, 1});
+        createList().add(new int[]{0, 1, 2, 3});
+        createList().add(new int[]{0, 1, 2, 3, 4, 5, 6});
+        createList().add(new int[]{});
     }
 
     public static void printList(ArrayList<int[]> list)

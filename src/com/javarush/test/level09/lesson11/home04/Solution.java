@@ -12,6 +12,7 @@ import java.util.Locale;
 Воспользоваться объектом Date и SimpleDateFormat.
 */
 
+
 public class Solution {
 
     public static void main(String[] args) throws Exception {
@@ -23,3 +24,4 @@ public class Solution {
         System.out.println(simpleDate.format(date).toUpperCase());
     }
 }
+
