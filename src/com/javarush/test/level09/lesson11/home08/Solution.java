@@ -18,6 +18,7 @@ public class Solution
     public static ArrayList<int[]> createList()
     {
         //Написать тут ваш код
+
         ArrayList<int[]> list = new ArrayList<int[]>();
         list.add(new int[]{0, 1, 2, 3, 4});
         list.add(new int[]{0, 1});
