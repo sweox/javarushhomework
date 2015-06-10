@@ -3,7 +3,6 @@ package com.javarush.test.level09.lesson11.bonus01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.File;
 
 /* Нужно исправить программу, чтобы компилировалась и работала
 Задача: Программа вводит два имени файла. И копирует первый файл на место заданное вторым именем.
