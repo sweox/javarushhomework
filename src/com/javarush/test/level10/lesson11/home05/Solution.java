@@ -90,4 +90,9 @@ public class Solution
             }
         }
     }
-*/
+    for(int i = 0; i < alphabet.size(); i++)
+    {
+        System.out.println(alphabet.get(i) + " " + count[i]);
+    }
+
+ */
