@@ -94,5 +94,59 @@ public class Solution
     {
         System.out.println(alphabet.get(i) + " " + count[i]);
     }
+//=====================================
+ int count = 0;
+ //суперциклы. И че я так долго думал над этим?
+ //сначала по алфавиту, потом по строке, потом по символу строки.
+ for (char abs : alphabet)
+ {
+    for (String lonelyString : list)
+    {
+        for (char symbol : lonelyString.toCharArray())
+        {
+            if(abs == symbol)
+            count++;
+        }
+    }
+ System.out.println(abs + " " + count);
+ count = 0;
+ }
+//=======================================
+ for (int i = 0; i < alphabet.size();i++)
+ {
+    int count = 0;
+    for (int x = 0; x<chars.length;x++)
+    {
+        if (alphabet.get(i)== chars[x])
+        {
+            count++;
+        }
+    }
 
+ System.out.println(alphabet.get(i)+" "+ count);
+ }
+ //=====================================
+ String str = list.toString();
+ for (int i = 0; i < alphabet.size(); i++)
+ {
+    int count = str.split(alphabet.get(i) + "").length;
+    counter[i] = count - 1;
+ }
+
+//=========================================
+//Данный код найдет частоту вхождения всех символов в тексте.
+ //       Хоть и не по условию, и решение не пройдет, но получилось изящно. И всего с одним циклом
+
+        String s = (new BufferedReader(new InputStreamReader(System.in))).readLine();
+        HashMap <Character , Integer> alphabet = new HashMap<Character , Integer>();
+        for ( Character i : s.toCharArray() )
+        {
+            Integer count = alphabet.get( i );
+            if (count == null)
+                count = 0;
+            alphabet.put( i , count + 1 );
+        }
+
+        for (Map.Entry<Character , Integer> i : alphabet.entrySet())
+        System.out.println(i.getKey() + " " + i.getValue());
  */
