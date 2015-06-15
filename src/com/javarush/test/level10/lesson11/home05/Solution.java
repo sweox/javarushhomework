@@ -16,6 +16,7 @@ import java.util.ArrayList;
 я 9
 */
 
+/**
 public class Solution
 {
     public static void main(String[] args)  throws Exception
@@ -41,6 +42,7 @@ public class Solution
 
 
         //Напишите тут ваш код
+ //----------------------МОЙ ВАРИАНТ 1---------------------------
         //Преобразование строк в список символов
         ArrayList<Character> ch = new ArrayList<Character>();   //Массив для символов
         for (int i = 0; i < list.size(); i++)
@@ -74,6 +76,8 @@ public class Solution
         }
     }
 }
+*/
+//Другие варианты
 /**
     int[] count = new int[33];
 
@@ -150,3 +154,67 @@ public class Solution
         for (Map.Entry<Character , Integer> i : alphabet.entrySet())
         System.out.println(i.getKey() + " " + i.getValue());
  */
+
+
+public class Solution
+{
+    public static void main(String[] args) throws Exception
+    {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        ArrayList<Character> alphabet = new ArrayList<Character>();
+        for (int i = 0; i < 32; i++)
+        {
+            alphabet.add((char) ('а' + i));
+        }
+        alphabet.add(6, 'ё');
+
+        ArrayList<String> list = new ArrayList<String>();
+        for(int i = 0; i < 10; i++)
+        {
+            list.add(reader.readLine().toLowerCase());
+        }
+        //===========================================
+        /**
+        //------------------------МОЙ ВАРИАНТ 2----------------------------------
+        int[] number = new int[33];
+        for (int i = 0; i < list.size(); i++)
+        {
+            //int count = 0;
+            for (int j = 0; j < list.get(i).length(); j++)
+            {
+                for (int k = 0; k < alphabet.size(); k++)
+                {
+                    char c = list.get(i).charAt(j);
+                    if (alphabet.get(k).equals(c))
+                    {
+                        number[k]++;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < alphabet.size(); i++)
+        {
+            System.out.println(alphabet.get(i) + " " + number[i]);
+        }
+         */
+        //---------------МОЙ ВАРИАНТ 3-----------------------
+
+        int count = 0;
+        for (char abc:alphabet)
+        {
+            for (String li:list)
+            {
+                for (char cha:li.toCharArray())
+                    if (abc==cha)
+                        count++;
+            }
+            System.out.println(abc + " " + count);
+            count = 0;
+        }
+
+
+
+    }
+}
+
