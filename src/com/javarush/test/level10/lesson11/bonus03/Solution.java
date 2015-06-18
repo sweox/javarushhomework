@@ -38,15 +38,14 @@ public class Solution
         //Напишите тут ваш код
         for (int i = 0; i < array.length; i++)
         {
-            int tmp = 0;
+            //int tmp = 0;
             for (int j = 0; j < array.length; j++)
             {
                 if (array[i] < array[j])
                 {
-                    tmp= array[j];
+                    int tmp= array[j];
                     array[j] = array[i];
                     array[i] = tmp;
-
                 }
             }
         }
