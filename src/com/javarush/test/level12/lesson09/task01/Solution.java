@@ -11,9 +11,9 @@ public class Solution
 
     }
 //add an interface here - добавь интерфейс тут
-interface Fly
+public interface Fly
 {
-    public String name();
-    public int getSpeed();
+    String name();
+    int getSpeed();
 }
 }
