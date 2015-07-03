@@ -8,6 +8,7 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        //System.out.println(new StringObject().getInstance());
     }
 
     interface SimpleObject<T>
@@ -15,12 +16,12 @@ public class Solution
         SimpleObject<T> getInstance();
     }
 
-    class StringObject implements SimpleObject<String>//допишите здесь ваш код
+    public static class StringObject implements SimpleObject//<String>//допишите здесь ваш код
     {
         private SimpleObject<String> t;
         public SimpleObject<String> getInstance()
         {
-            return t;
+            return this;
         }
     }
 }
