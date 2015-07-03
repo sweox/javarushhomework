@@ -31,7 +31,7 @@ public class Solution
         @Override
         public String toString()
         {
-            return String.format("%s for today", this.getWeatherType());
+            return String.format("%s for today",  this.getWeatherType());
         }
     }
 }
