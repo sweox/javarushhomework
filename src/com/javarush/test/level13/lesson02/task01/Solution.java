@@ -10,6 +10,7 @@ package com.javarush.test.level13.lesson02.task01;
 /**
  * http://www.linkex.ru/java/variables-in-interfaces.php
  * http://habrahabr.ru/post/30444/
+ * http://idev.by/android/22629/
  */
 
 public class Solution
