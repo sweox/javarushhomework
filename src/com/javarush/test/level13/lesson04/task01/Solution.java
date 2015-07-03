@@ -25,7 +25,7 @@ public class Solution
             return "Я переводчик с " + getLanguage();
         }
     }
-    static class EnglishTranslator extends Translator
+    public static class EnglishTranslator extends Translator
     {
         public String getLanguage()
         {
