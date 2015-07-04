@@ -36,12 +36,13 @@ public class Solution
             listInteger.add(data);
             //System.out.print((char)input.read());
         }
-        //for (int f:listInteger)
-        //{
-        //    String str = Integer.toString(f);
-        //    listString.add(str);
-        //}
+        for (int f:listInteger)
+        {
+            //String str = Integer.toString(f);
+            //listString.add(str);
+            System.out.print((char)f);
+        }
         input.close();
-        System.out.println(listInteger);
+        //System.out.println(listInteger);
     }
 }
