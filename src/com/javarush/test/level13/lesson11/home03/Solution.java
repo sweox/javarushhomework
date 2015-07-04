@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.io.InputStream;
 
 public class Solution
 {
@@ -20,21 +21,27 @@ public class Solution
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String path = reader.readLine();
 
-        FileInputStream input = new FileInputStream(path);
+        InputStream input = new FileInputStream(path);
         ArrayList<Integer> listInteger = new ArrayList<Integer>();
-        ArrayList<String> listString = new ArrayList<String>();
+        //ArrayList<String> listString = new ArrayList<String>();
         //FileOutputStream output = new FileOutputStream();
+
+        //for (char c='а'; c<='я'; c++) {
+        //    System.out.println("code="+(int)c+"\tsumbol="+c);
+        //}
+
         while (input.available() > 0)
         {
             int data = input.read();
             listInteger.add(data);
+            //System.out.print((char)input.read());
         }
-        for (int f:listInteger)
-        {
-            String str = Integer.toString(f);
-            listString.add(str);
-        }
+        //for (int f:listInteger)
+        //{
+        //    String str = Integer.toString(f);
+        //    listString.add(str);
+        //}
         input.close();
-        System.out.println(listString);
+        System.out.println(listInteger);
     }
 }
