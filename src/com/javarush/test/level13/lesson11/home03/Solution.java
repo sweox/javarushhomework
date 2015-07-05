@@ -7,6 +7,7 @@ package com.javarush.test.level13.lesson11.home03;
 */
 /**
  * http://www.skipy.ru/technics/encodings.html     Про кодировки
+ * http://www.mkyong.com/java/how-to-read-utf-8-encoded-data-from-a-file-java/      UTF-8
  */
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -28,8 +29,8 @@ public class Solution
         String path = reader.readLine();
 
         InputStream input = new FileInputStream(path);
-        OutputStream output = new PrintStream (System.out);
-        ArrayList<Integer> listInteger = new ArrayList<Integer>();
+        //OutputStream output = new PrintStream (System.out);
+        //ArrayList<Integer> listInteger = new ArrayList<Integer>();
         //FileOutputStream output = new FileOutputStream();
 
         //for (char c='а'; c<='я'; c++) {
