@@ -19,16 +19,22 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.FileNotFoundException;
+import java.io.File;
 
 public class Solution
 {
     public static void main(String[] args) throws IOException, FileNotFoundException
     {
         //add your code here
+        //File fileDir = new File("c:\\r.txt");
+        //BufferedReader reader = new BufferedReader(
+        //    new InputStreamReader(
+         //           new FileInputStream(fileDir), "UTF8"));
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String path = reader.readLine();
 
+        String path = reader.readLine();
         InputStream input = new FileInputStream(path);
+
         //OutputStream output = new PrintStream (System.out);
         //ArrayList<Integer> listInteger = new ArrayList<Integer>();
         //FileOutputStream output = new FileOutputStream();
