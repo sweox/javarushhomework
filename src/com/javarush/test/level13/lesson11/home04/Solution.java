@@ -21,20 +21,27 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String r = reader.readLine();
-        ArrayList<Integer> list = new ArrayList<Integer>();
         OutputStream output = new FileOutputStream(r);
-        while (!reader.readLine().equals("exit")){
-            list.add(Integer.parseInt(reader.readLine()));
-        }
-        while(list.size() > 0){
-            for (int x:list){
-                output.write(x);
+        while (true)
+        {
+            String g = reader.readLine();
+            if (g.equals("exit"))
+            {
+                output.write((g + "\n").getBytes());
+                break;
             }
-            //output.write(list);
-        }
+            else
+                output.write((g + "\n").getBytes());
 
+        }
         reader.close();
-        //input.close();
         output.close();
     }
 }
+/**
+String line;
+while (!(line = reader.readLine()).equals("exit")) {
+        line += "\r\n";
+        out.write(line.getBytes());
+        }
+ */
