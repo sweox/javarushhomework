@@ -5,7 +5,13 @@ package com.javarush.test.level13.lesson11.home04;
 2. Считывать строки с консоли, пока пользователь не введет строку "exit".
 3. Вывести все строки в файл, каждую строчку с новой стороки.
 */
-//http://citforum.ru/internet/javascript/java_rbint.shtml
+/**
+ * Для справки:
+ *Writer/*Reader классы предназначены для работы с символьными потоками,
+ * а *Stream - с байтовыми
+ * http://citforum.ru/internet/javascript/java_rbint.shtml
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
