@@ -6,6 +6,6 @@ package EkkelThinkingInJava.head02;
 public class Head0202
 {
     public static void main(String[] args){
-        System.out.println("Привет мир!");
+        System.out.println("Привет  мир!");
     }
 }
