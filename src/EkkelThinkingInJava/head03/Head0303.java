@@ -7,15 +7,15 @@ package EkkelThinkingInJava.head03;
  */
 
     class Letter {
-        char c;
+        float c;
     }
     public class Head0303 {
         static void f(Letter y){
-            y.c = 'z';
+            y.c = 99;
         }
         public static void main(String[] args) {
             Letter x = new Letter();
-            x.c = 'a';
+            x.c = 8;
             System.out.println("1: x.c: " + x.c);
             f(x);
             System.out.println("2: x.c: " + x.c);
