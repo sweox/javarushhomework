@@ -24,7 +24,6 @@ public class Solution
         {
             return StringObject.this;
             //return new StringObject<Object>();
-
         }
     }
 
