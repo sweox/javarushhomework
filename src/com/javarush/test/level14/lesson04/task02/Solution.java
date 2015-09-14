@@ -16,6 +16,33 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         //Add your code here
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        //====================
+        //for(;!reader.readLine().isEmpty();)
+        //=========================
+        while (true)
+        {
+            String stringReader = reader.readLine();
+            if (stringReader.equals(""))
+                break;
+            else
+                System.out.println(CatFactory.getCatByKey(stringReader));
+        }
+        //=======================
+        //String stringReader = reader.readLine();
+        //while (!stringReader.isEmpty()) {
+        //    System.out.println(CatFactory.getCatByKey(stringReader));
+        //    stringReader = reader.readLine();
+        //}
+        //===================================
+        String stringReader = null;
+        //while (!(( stringReader=reader.readLine()).equals("")))
+        //while ((stringReader = reader.readLine()) != null)
+        //while (!(( stringReader=reader.readLine()).isEmpty()))
+        //{
+        //    Cat cat = CatFactory.getCatByKey(stringReader);
+        //    System.out.println(cat.toString());
+        //}
     }
 
     static class CatFactory
