@@ -35,7 +35,7 @@ public class Solution
         //    stringReader = reader.readLine();
         //}
         //===================================
-        String stringReader = null;
+        //String stringReader = null;
         //while (!(( stringReader=reader.readLine()).equals("")))
         //while ((stringReader = reader.readLine()) != null)
         //while (!(( stringReader=reader.readLine()).isEmpty()))
