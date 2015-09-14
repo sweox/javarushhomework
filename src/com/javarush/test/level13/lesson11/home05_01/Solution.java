@@ -1,4 +1,4 @@
-package com.javarush.test.level13.lesson11.home05;
+package com.javarush.test.level13.lesson11.home05_01;
 
 /* Neo
 1. Реализовать интерфейс DBObject в классе User.
