@@ -7,6 +7,6 @@ public abstract class Hen
 {
     abstract int getCountOfEggsPerMonth();
     public String getDescription() {
-        return "Я курица.";
+        return "РЇ РєСѓСЂРёС†Р°.";
     }
 }
