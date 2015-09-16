@@ -1,6 +1,8 @@
 package com.javarush.test.level14.lesson08.home02;
 
-/* Дегустация вин
+/* http://www.tutorialspoint.com/java/index.htm
+
+Дегустация вин
 1. Создать абстрактный класс Drink с реализованным методом public void taste(),
 который выводит в консоль "Вкусно"
 2. Создать класс Wine, который наследуется от Drink, с реализованным методом public String
