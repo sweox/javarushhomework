@@ -1,5 +1,7 @@
 package com.javarush.test.level14.lesson08.bonus01;
 
+
+import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,7 +80,57 @@ public class Solution
         {
             exceptions.add(e);
         }
+        //--------6------FileNotFoundException
+        try
+        {
+            FileInputStream re = new FileInputStream("C:\\t.t");
+        }
+        catch (Exception e)
+        {
+            exceptions.add(e);
+        }
+        //---------7-----NumberFormatException
+        try
+        {
+            String myVar = "1255763710960";
+            int myTempVar;
+            myTempVar = Integer.valueOf(myVar);
+        }
+        catch (Exception e)
+        {
+            exceptions.add(e);
+        }
+        //-------8-----NegativeArraySizeException
+        try
+        {
+            int i = -1;
+            int[] g = new int[i];
+        }
+        catch (Exception e)
+        {
+            exceptions.add(e);
+        }
+        //------9-----IllegalThreadStateException
+        try
+        {
+            Thread d1 = new Thread();
+            d1.start();
+            d1.start();
+        }
+        catch (IllegalThreadStateException e) {
+            exceptions.add(e);
+        }
+        //-------10----
+        try
+        {
+            Object x[]=new String[3];
+            x[0]=new Integer(10);
+        }
+        catch (ArrayStoreException e) {
+            exceptions.add(e);
+        }
     }
+
 }
 
 /*
