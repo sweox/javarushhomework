@@ -120,7 +120,7 @@ public class Solution
         catch (IllegalThreadStateException e) {
             exceptions.add(e);
         }
-        //-------10----
+        //-------10----ArrayStoreException
         try
         {
             Object x[]=new String[3];
