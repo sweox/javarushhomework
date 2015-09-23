@@ -60,6 +60,7 @@ public class Solution
         public Swimable getCurrentAnimal()
         {
             return new Orca();
+            //return this;
         }
     }
 
