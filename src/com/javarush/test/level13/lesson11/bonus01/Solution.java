@@ -25,6 +25,64 @@ public class Solution
 {
     public static void main(String[] args) throws IOException
     {
+        //открываем поток для чтения имени файла
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String fileName = reader.readLine();
+        reader.close(); //закрываем поток
+
+        //Создаем лист, в котором будем хранить данные
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        //Открываем поток чтения из файла
+        BufferedReader inputStream = new BufferedReader(new FileReader(fileName));
+
+        while (inputStream.ready()) //пока данные читаются
+        {
+            int i = Integer.parseInt(inputStream.readLine());
+            if (i%2==0) list.add(i);
+        }
+
+        Collections.sort(list); //сортируем
+
+        for (int i : list) System.out.println(i);
+
+    }
+}
+
+/*
+public class Solution
+{
+    public static void main(String[] args) throws IOException
+    {
+        // напишите тут ваш код
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine();
+        BufferedReader reader = new BufferedReader(new FileReader(s));
+
+        ArrayList<Integer> list = new ArrayList<Integer>();
+
+        String num = br.readLine();
+
+        while ((num = reader.readLine()) != null) {
+            int number = Integer.parseInt(num);
+            if ((number%2==0)) {
+                list.add(number);
+            }
+        }
+
+        Collections.sort(list);
+        for (int x: list) {
+            System.out.println(x);
+        }
+    }
+}
+*/
+//=============мой вариант
+/*
+public class Solution
+{
+    public static void main(String[] args) throws IOException
+    {
         // напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         BufferedReader fileReader = new BufferedReader(new FileReader(reader.readLine()));
@@ -41,13 +99,14 @@ public class Solution
         }
 
         //=============================
-        sort(array);
-        //Collections.sort(array);
+        //sort(array);
+        Collections.sort(array);
         for (Integer x:array)
         {
             System.out.println(x);
         }
         fileReader.close();
+        reader.close();
     }
     public static void sort(ArrayList<Integer> list)
     {
@@ -65,7 +124,7 @@ public class Solution
         }
     }
 }
-
+*/
 /*
 public class Solution
 {
