@@ -13,7 +13,7 @@ false
 
 public class Solution {
     public static interface Alive {
-        boolean containsBones();
+        Object containsBones();
     }
 
     public static class BodyPart implements Alive {
@@ -23,12 +23,20 @@ public class Solution {
             this.name = name;
         }
 
-        public boolean containsBones() {
-            return true;
-        }
+        public Object containsBones() {
+            return "Yes";
 
+        }
         public String toString() {
-            return containsBones() ? name + " содержит кости" : name + " не содержит кости";
+            return (containsBones().equals("Yes")) ? name + " содержит кости" : name + " не содержит кости";
+//            String tmp = null;
+//            if (containsBones().equals("Yes")) {
+//                tmp = name + " содержит кости";
+//            }
+//            if (containsBones().equals("No")) {
+//                tmp = name + " не содержит кости";
+//            }
+//            return tmp;
         }
     }
 
@@ -39,8 +47,12 @@ public class Solution {
             this.isFoot = isFoot;
         }
 
-        public boolean containsBones() {
-            return super.containsBones() && !isFoot;
+        public Object containsBones() {
+            return super.containsBones().equals("Yes") && !isFoot ? "Yes" : "No";
+//            if (super.containsBones().equals("Yes") && !isFoot) {
+//                return "Yes";
+//            }
+//            else return "No";
         }
     }
     public static void main(String[] args)
