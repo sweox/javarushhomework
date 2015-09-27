@@ -5,6 +5,8 @@ package com.javarush.test.level15.lesson04.task03;
 2. Удалите все лишние реализации метода print.
 */
 
+//То есть, цепочка расширения выглядит так: byte >> short >> int >> long >> float >> double
+
 public class Solution {
     public static void main(String[] args) {
         print(1);
