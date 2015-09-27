@@ -9,6 +9,10 @@ package com.javarush.test.level15.lesson06.task02;
 PS: Взаимосвязь между объектами классов NakedCat и NormalCat, SiamCat - Is-a (наследование):
 http://en.wikipedia.org/wiki/Is-a
 http://cs7002.vk.me/c7007/v7007577/1411a/_dAiEola310.jpg
+
+
+http://developer.alexanderklimov.ru/android/java/extends.php
+
 */
 
 public class Solution {
