@@ -14,13 +14,13 @@ public class Solution {
     public static int A;
     public static int B;
 
-
     static {
         try
         {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             A = Integer.parseInt(reader.readLine());
             B = Integer.parseInt(reader.readLine());
+            reader.close();
         }
         catch (IOException e) {
             System.out.println(e);
