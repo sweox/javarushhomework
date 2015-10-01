@@ -21,7 +21,10 @@ public class Solution {
 
     static {
         //throw an exception here - выбросьте эксепшн тут
+        //=====================================
         //throw new RuntimeException();
+        //======================================
+        //if (true) {throw new RuntimeException();}
         try {
             A = 6/0;
         }
@@ -29,6 +32,7 @@ public class Solution {
             //System.out.println(e);
             throw new RuntimeException();
         }
+        //=========================================
         /*try {
             throw new RuntimeException();
         }
