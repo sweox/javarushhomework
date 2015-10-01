@@ -22,6 +22,10 @@ public class Solution {
         cat = myCat;
         System.out.println(myCat.name);
     }
+//    public static void main(String[] args) {
+//        System.out.println(cat);
+//
+//    }
 }
 
 /*
