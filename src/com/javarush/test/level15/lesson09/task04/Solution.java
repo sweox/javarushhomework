@@ -21,7 +21,7 @@ public class Solution {
 
     static {
         //throw an exception here - выбросьте эксепшн тут
-        //new RuntimeException();
+        //throw new RuntimeException();
         try {
             A = 6/0;
         }
@@ -29,7 +29,12 @@ public class Solution {
             //System.out.println(e);
             throw new RuntimeException();
         }
-
+        /*try {
+            throw new RuntimeException();
+        }
+        catch (ArithmeticException e)
+        {
+        }*/
     }
 
     public static int B = 5;
