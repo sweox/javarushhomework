@@ -31,12 +31,13 @@ public class Solution
         }
         System.out.println(delitel);*/
 //============2-й вариант==================
+        /*while (b != 0)
+            b = a % (a = b);
+        return a;*/
+//======3-й вариант==============
         numbers(a, list1);
         numbers(b, list2);
         delitel(list1, list2, list3);
-        //System.out.println(list1);
-        //System.out.println(list2);
-        //System.out.println(list3);
         System.out.println(list3.get(list3.size() - 1));
 
     }
@@ -58,7 +59,6 @@ public class Solution
             }
         }
     }
-
 }
 
 /*
