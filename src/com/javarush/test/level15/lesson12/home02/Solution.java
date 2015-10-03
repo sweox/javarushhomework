@@ -17,6 +17,43 @@ public class Solution {
 
     public static class Duck implements Flyable, Movable {
         @Override
+        public void doActionF() {
+            System.out.println("flying");
+        }
+        public void doActionM() {
+            System.out.println("moving");
+        }
+    }
+
+    public static class Util {
+        static void fly(Flyable animal) {
+            animal.doActionF();
+        }
+
+        static void move(Movable animal) {
+            animal.doActionM();
+        }
+    }
+
+    public static interface Flyable {
+        void doActionF();
+    }
+
+    public static interface Movable {
+        void doActionM();
+    }
+}
+
+/*
+public class Solution {
+    public static void main(String[] args) {
+        Duck duck = new Duck();
+        Util.fly(duck);
+        Util.move(duck);
+    }
+
+    public static class Duck implements Flyable, Movable {
+        @Override
         public void doAction() {
             System.out.println("flying");
         }
@@ -40,3 +77,4 @@ public class Solution {
         void doAction();
     }
 }
+*/
