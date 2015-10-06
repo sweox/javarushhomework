@@ -16,6 +16,9 @@ import java.io.InputStreamReader;
 строки.
 */
 
+/*Переменная типа интерфейс может содержать либо нулевую ссылку, либо ссылку на объект
+любого класса, реализующий данный интерфейс.*/
+
 public class Solution {
     public static Planet thePlanet;
 
