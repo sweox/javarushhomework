@@ -6,6 +6,8 @@ package com.javarush.test.level15.lesson12.home08;
 F9 - выполнение кода до следующего breakpoint-а
 F8 - переход к следующей строке кода
 */
+//https://www.youtube.com/watch?v=w9Im4aAhvXE
+//https://github.com/StanislavShestakov/JavaRush
 
 public class Solution {
     public static void main(String[] args) {
@@ -17,10 +19,10 @@ public class Solution {
 
         public A(int f1) {
             this.f1 = f1;
-            initializee();
+            initialize();
         }
 
-        protected void initializee() {
+        private void initialize() {
             System.out.println(f1);
         }
     }
