@@ -32,18 +32,24 @@ public class Solution {
         //add your code here
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String r = reader.readLine();
-        char[] ch = r.toCharArray();
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 0; i < ch.length; i++) {
-            if (ch[i]=='?' || ch[i] == '&')
-            {
-                while ((i<ch.length - 1) && !(ch[i+1] == '&'))
-                {
-                    i++;
-                    System.out.print(ch[i]);
-                }
-                System.out.print(" ");
-            }
+//        char[] ch = r.toCharArray();
+//        for (int i = 0; i < ch.length; i++) {
+//            if (ch[i]=='?' || ch[i] == '&')
+//            {
+//                while ((i<ch.length - 1) && !(ch[i+1] == '&'))
+//                {
+//                    i++;
+//                    System.out.print(ch[i]);
+//                }
+//                System.out.print(" ");
+//            }
+//        }
+//==================================================
+        String[] s = r.split("&");
+        for(String x:s)
+        {
+            System.out.println(x);
         }
     }
 
