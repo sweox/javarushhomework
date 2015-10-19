@@ -46,12 +46,27 @@ public class Solution {
 //            }
 //        }
 //==================================================
-        //System.out.println(r.indexOf("?"));
         String subStr = r.substring(r.indexOf("?") + 1);
         String[] s = subStr.split("&");
+        String[] _x = null;
         for(String x:s)
         {
-            System.out.println(x);
+            if (x.contains("=")) {
+                _x = x.split("=");
+                System.out.print(_x[0] + " ");
+                if (_x[0].equals("obj")) {
+                    alert(_x[1]);
+                }
+            }
+            else
+                System.out.print(x + " ");
+        }
+        for(String _z:_x)
+        {
+            if (_x[0].equals("obj"))
+            {
+                alert(_x[1]);
+            }
         }
 
     }
