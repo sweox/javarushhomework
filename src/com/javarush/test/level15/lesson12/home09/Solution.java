@@ -46,11 +46,14 @@ public class Solution {
 //            }
 //        }
 //==================================================
-        String[] s = r.split("&");
+        //System.out.println(r.indexOf("?"));
+        String subStr = r.substring(r.indexOf("?") + 1);
+        String[] s = subStr.split("&");
         for(String x:s)
         {
             System.out.println(x);
         }
+
     }
 
     public static void alert(double value) {
