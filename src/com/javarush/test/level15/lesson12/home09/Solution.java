@@ -33,42 +33,40 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String r = reader.readLine();
         ArrayList<String> list = new ArrayList<String>();
-//        char[] ch = r.toCharArray();
-//        for (int i = 0; i < ch.length; i++) {
-//            if (ch[i]=='?' || ch[i] == '&')
-//            {
-//                while ((i<ch.length - 1) && !(ch[i+1] == '&'))
-//                {
-//                    i++;
-//                    System.out.print(ch[i]);
-//                }
-//                System.out.print(" ");
-//            }
-//        }
 //==================================================
         String subStr = r.substring(r.indexOf("?") + 1);
-        String[] s = subStr.split("&");
+        String[] subStrSplit = subStr.split("&");
         String[] _x = null;
-        for(String x:s)
+        for (int i = 0; i < subStrSplit.length; i++)
         {
-            if (x.contains("=")) {
-                _x = x.split("=");
-                System.out.print(_x[0] + " ");
+            if (subStrSplit[i].contains("=")) {
+                _x = subStrSplit[i].split("=");
+                System.out.print(_x[0]);
                 if (_x[0].equals("obj")) {
-                    alert(_x[1]);
+                    list.add(_x[1]);
                 }
             }
             else
-                System.out.print(x + " ");
-        }
-        for(String _z:_x)
-        {
-            if (_x[0].equals("obj"))
-            {
-                alert(_x[1]);
-            }
+                System.out.print(subStrSplit[i]);
+            if (i < subStrSplit.length - 1)
+                System.out.print(" ");
+            if ((i == subStrSplit.length - 1))
+                System.out.println();
         }
 
+        for (int i = 0; i < list.size(); i++)
+        {
+            try{
+                alert(Integer.parseInt(list.get(i)));
+            }
+            catch (NumberFormatException e) {
+                if (list.get(i).contains(".")) {
+                alert(Double.parseDouble(list.get(i)));
+            }
+                else
+                    alert(list.get(i));
+            }
+        }
     }
 
     public static void alert(double value) {
