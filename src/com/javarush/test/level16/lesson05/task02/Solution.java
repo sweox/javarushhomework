@@ -68,7 +68,7 @@ public class Solution {
             }
             else if (!horses.get(i).isFinished()) {
                 System.out.println("Waiting for " + horses.get(i).getName());
-                //horses.get(i).join();
+                horses.get(i).join();
             }
         }
         return countFinished;
