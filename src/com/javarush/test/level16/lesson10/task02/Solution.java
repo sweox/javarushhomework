@@ -12,6 +12,16 @@ package com.javarush.test.level16.lesson10.task02;
 PS: метод sleep выбрасывает InterruptedException.
 */
 
+/*
+Когда ты вызываешь interrupt() он меняет состояние не isInterrupted, а состояния флага у данного
+потока(нити). Метод sleep() проверяет состояние флага и если он установлен, то выбрасывает
+InterruptedException, а обработчик исключений сбрасывает состояние флага на обычное. Убери
+Thread.sleep(500) стоящую после вызова interrupt и ты убедишься в этом.
+Если надо срочно завершить процесс используй return;
+Спасибо за хороший вопрос.
+Почитай вот это (http://javaforcats.blogspot.com.by/2013/03/threadcurrentthreadinterrupt.html)
+и это (http://stackoverflow.com/questions/2491588/how-a-thread-should-close-itself-in-java)
+ */
 public class Solution {
     public static volatile int countSeconds = 3;
 
