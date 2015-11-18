@@ -1,3 +1,4 @@
+                    LEVEL 16
 com.javarush.test.level16.lesson13.home03;
 Потоки
     //count--;
@@ -5,3 +6,4 @@ com.javarush.test.level16.lesson13.home03;
     //count--;
     Почему-то count в первом случае нормально уменьшается, а во фтором случае count в два раза больше.
 ==================================================================
+http://habrahabr.ru/post/164487/
