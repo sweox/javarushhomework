@@ -38,12 +38,17 @@ fruits = new ArrayList<String>();
 вызовет ошибку.
 ---------------------------------------------------------------
     level17.lesson04.task04
-    Реализация Singleton в JAVA http://habrahabr.ru/post/27108/
-    How do I use a synchronized block in a static method? http://www.avajava.com/tutorials/lessons/how-do-i-use-a-synchronized-block-in-a-static-method.html
-    http://info.javarush.ru/JavaRush_tasks_discussion/2013/08/31/level17-lesson04-task04.html
+Реализация Singleton в JAVA http://habrahabr.ru/post/27108/
+How do I use a synchronized block in a static method? http://www.avajava.com/tutorials/lessons/how-do-i-use-a-synchronized-block-in-a-static-method.html
+http://info.javarush.ru/JavaRush_tasks_discussion/2013/08/31/level17-lesson04-task04.html
 
     level17.lesson04.task05
-    -----------------------------------------------
+-----------------------------------------------
+    level17.lesson06.task02
+До конца не понятно как работает программа
+Почитать про volatile Ключевое слово volatile в Java http://ru.stackoverflow.com/questions/1271/%D0%9A%D0%BB%D1%8E%D1%87%D0%B5%D0%B2%D0%BE%D0%B5-%D1%81%D0%BB%D0%BE%D0%B2%D0%BE-volatile-%D0%B2-java
+---------------------------------------------------------------
+
 
 =============================================
 http://habrahabr.ru/post/164487/        Многопоточность в Java
