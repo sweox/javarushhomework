@@ -42,6 +42,9 @@ fruits = new ArrayList<String>();
     How do I use a synchronized block in a static method? http://www.avajava.com/tutorials/lessons/how-do-i-use-a-synchronized-block-in-a-static-method.html
     http://info.javarush.ru/JavaRush_tasks_discussion/2013/08/31/level17-lesson04-task04.html
 
+    level17.lesson04.task05
+    -----------------------------------------------
+
 =============================================
 http://habrahabr.ru/post/164487/        Многопоточность в Java
 =====================================================
