@@ -88,3 +88,9 @@ public class Solution implements List<Long> {
         return original.subList(fromIndex, toIndex);
     }
 }
+/*
+
+public class Solution {
+    private ArrayList<Long> original = new ArrayList<Long>();
+}
+*/
