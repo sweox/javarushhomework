@@ -15,7 +15,7 @@ public class Foo
     double r1 = Math.random();
     int r2 = (int) (r1 * 5);
 
-    int x = Math.round(6.8f);
+    int z = Math.round(6.8f);
     long v = Math.round(6.0);
 
     ArrayList<Integer> listOfNumber = new ArrayList<Integer>();
