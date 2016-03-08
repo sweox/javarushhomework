@@ -1,5 +1,7 @@
 package test.Boo;
 
+import java.util.Calendar;
+
 /**
  * Created by Belshina on 04.03.16.
  */
@@ -20,6 +22,11 @@ class SonOfBoo extends Boo {
     public SonOfBoo(String s) {
         super(42);
     }
+
+
+    Calendar cal = Calendar.getInstance();
+
+
 //    public SonOfBoo(int i, String s) {
 //    }
 //    public SonOfBoo(String a, String b, String c) {
