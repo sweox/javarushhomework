@@ -41,6 +41,7 @@ public class Solution {
         f.setFileName(fileName);
         f.start();
         f.join();
+        //System.out.println(f.getName());
         System.out.println(f.getFileContent());
     }
 
@@ -76,7 +77,7 @@ public class Solution {
         String getFileContent();
 
         void join() throws InterruptedException;
-
+        //String getName();
         void start();
     }
 }
