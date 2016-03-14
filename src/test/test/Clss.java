@@ -31,6 +31,6 @@ public class Clss
         Twu twu = new Twu();
         one.Incr(twu.g);
         One.setOne(twu.g);
-
+        one.setOne(twu.g);
     }
 }
