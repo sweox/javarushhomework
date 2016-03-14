@@ -10,16 +10,18 @@ public class Solution3
 
     private void method0() {
         double i = method3();
+        System.out.println("method0 - " + i);
     }
 
     protected synchronized void method1(String param1) {
         Solution3 solution = new Solution3();
-        solution.method0();
-        System.out.println(solution.param);
+        //solution.method0();
+        System.out.println("solution3 param method1 - " + solution.param);
+        System.out.println("solution3 param method3 - " + solution.method3());
     }
 
     public void print() {
-        System.out.println(param);
+        System.out.println("solution param - " + param);
     }
 
     public void method2(int param1) {
@@ -28,6 +30,7 @@ public class Solution3
 
     synchronized double method3() {
         double random = Math.random();
+        //System.out.println("random method3 - " + random);
         param += 40.7;
         return random + param;
     }
