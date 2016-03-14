@@ -33,7 +33,8 @@ public class Solution
         static double size = allDrugs.size();
         static double index2 = index % size;
         static double i = 65.3535945426077 % 3.0;
-        static double i1 = 65.0 % 3.0;
+        static double i1 = 889 % 12;
+        static double i2 = (Math.random() * 3) + 1;
 
 
 
@@ -51,5 +52,6 @@ public class Solution
         System.out.println("index2 - " + index2);
         System.out.println("i - " + i);
         System.out.println("i1 - " + i1);
+        System.out.println("i2 - " + i2);
     }
 }
