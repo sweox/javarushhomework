@@ -5,7 +5,7 @@ package com.javarush.test.level17.lesson10.home04;
  */
 public class Solution3
 {
-    private double param = Math.random();
+    private double param = Math.random() ;
     private StringBuilder sb = new StringBuilder();
 
     private void method0() {
@@ -14,14 +14,16 @@ public class Solution3
     }
 
     protected synchronized void method1(String param1) {
-        Solution3 solution = new Solution3();
+        Solution3 solution3 = new Solution3();
+        //Solution3 solution3 = n
         //solution.method0();
-        System.out.println("solution3 param method1 - " + solution.param);
-        System.out.println("solution3 param method3 - " + solution.method3());
+        System.out.println("solution3 param method1 - " + solution3.param);
+        System.out.println("solution3 in method3 (param + 40.7 = " + solution3.method3() + ")");
+        //System.out.println("solution3 param method1 - " + solution3.param);
     }
 
     public void print() {
-        System.out.println("solution param - " + param);
+        System.out.println("s param - " + param);
     }
 
     public void method2(int param1) {
@@ -31,8 +33,8 @@ public class Solution3
     synchronized double method3() {
         double random = Math.random();
         //System.out.println("random method3 - " + random);
-        param += 40.7;
-        return random + param;
+        return param = param + 40.7;
+        //return random + param;
     }
 
     private synchronized void method4() {
