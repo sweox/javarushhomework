@@ -22,7 +22,7 @@ public class Solution {
         @Override
         public void run()
         {
-            synchronized (getClass()) /*(getClass())*/
+            synchronized (Solution.Person.class) /*(getClass())*/
             {
                 Iron iron = takeIron();
                 Clothes clothes = takeClothes();
