@@ -25,7 +25,7 @@ public class Solution {
         MaxValue maxValue = new MaxValue();
         System.out.println(maxValue.maxValue(list));
         reader.close();
-
+        inputStream.close();
     }
     public static class MaxValue {
         public Integer maxValue(ArrayList<Integer> list) {
