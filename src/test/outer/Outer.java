@@ -10,7 +10,7 @@ public class Outer
     void doStuff() {
         final String z = "local variable";
         class Ineer{
-            pubic void seeOuter() {
+            public void seeOuter() {
                 System.out.println("Outer x is: " + x);
                 System.out.println("Lical variable z is: " + z);
             }
