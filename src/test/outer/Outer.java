@@ -8,7 +8,7 @@ public class Outer
     private String x = "instance variable";
 //    String z = "local variable";
     void doStuff() {
-        String z = "local variable";
+        final String z = "local variable";
         class Ineer{
             pubic void seeOuter() {
                 System.out.println("Outer x is: " + x);
