@@ -7,6 +7,8 @@ public class Outer
 {
     private String x = "instance variable";
 //    String z = "local variable";
+    float r = (float) (1 + 0.9);
+    byte b = (byte)1000;
     void doStuff() {
         final String z = "local variable";
         class Ineer{
