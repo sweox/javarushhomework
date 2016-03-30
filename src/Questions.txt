@@ -1,3 +1,19 @@
+OutOfMemoryError как джавист вы должны поставить больше памяти
+StackOverFlowError - вы должны переписать алгоритм(ваш алгоритм допускает слишком
+глубокое погружение в эксепшн)
+ClassNotFound... - забыли положить какой-то Jar-ник
+----
+Принципв SOLID
+Полиморфизм, инкапсуляция, наследование, абстакция
+----------------
+Entity       hash.equal.tostr
+Value Object  hash.equal.tostr   Programming language
+Maneger/Service
+Base/Abstract/Sceleton
+Containers(в Java Collection) hash.equal.tostr
+---
+история переписывания метода sort на habrahabr
+
                     LEVEL 15
     level15.lesson12.bonus01
     Почему-то мой метод не работал
