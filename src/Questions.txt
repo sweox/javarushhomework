@@ -1,3 +1,16 @@
+http://coub.com/view/8y58q
+http://coub.com/view/6h7dc
+http://coub.com/view/aouex
+http://coub.com/view/5v1l9
+http://coub.com/view/1o6lq
+http://coub.com/view/2o41q
+http://coub.com/view/8q1r3
+
+http://coub.com/4fa4d18fc2a43b45862e12b1a226b2cc#simples
+https://www.youtube.com/watch?v=aMhHq1R-9Rs
+https://www.youtube.com/watch?v=VLMX7m1vmCo
+https://www.youtube.com/watch?v=Wga5A6R9BJg
+
 OutOfMemoryError как джавист вы должны поставить больше памяти
 StackOverFlowError - вы должны переписать алгоритм(ваш алгоритм допускает слишком
 глубокое погружение в эксепшн)
