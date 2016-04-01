@@ -16,6 +16,7 @@ public class Generi
 
 //        list.add("First");
 //        list.add(10);
+
         List<String> list2 = list;
         System.out.println(list2);
 //        for(Iterator<String> l = list2.iterator(); l.hasNext(); ) {
