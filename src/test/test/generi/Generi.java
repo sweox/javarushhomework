@@ -25,6 +25,7 @@ public class Generi
         List<String> list1 = new LinkedList<>();
         list.add("First");
         list.add(10);
+
         List list3 = list1;
         for(Iterator<String> iterItm = list3.iterator(); iterItm.hasNext(); ) {
             System.out.println(iterItm.next());
