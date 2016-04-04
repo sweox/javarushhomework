@@ -10,7 +10,7 @@ public class Poli_cons
         A() {
             printLength();
         }
-        private void printLength() {
+        void printLength() {
             System.out.println(str.length());
         }
     }
