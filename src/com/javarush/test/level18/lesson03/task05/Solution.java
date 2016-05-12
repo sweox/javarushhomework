@@ -34,5 +34,7 @@ public class Solution {
         for (Integer elementsTree:tree) {
             System.out.print(elementsTree + " ");
         }
+        reader.close();
+        stream.close();
     }
 }
