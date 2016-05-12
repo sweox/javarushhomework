@@ -31,6 +31,9 @@ public class Solution {
         while ((readStream = stream.read()) > 0) {
             tree.add(readStream);
         }
+//        while (stream.available() > 0) {
+//            tree.add(stream.read());
+//        }
         for (Integer elementsTree:tree) {
             System.out.print(elementsTree + " ");
         }
