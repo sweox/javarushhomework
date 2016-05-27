@@ -6,20 +6,20 @@ package test.test.wrapper;
 public class Wrapper
 {
     public static void main(String[] args) {
-        Cat cat = new Cat("Петька");
+        Cat cat = new Cat();
         printNameCat(cat);
         CatWrapper catWrapper = new CatWrapper(cat);
-        printNameCatWrapper(catWrapper);
+        printNameCat(catWrapper);
     }
     static void printNameCat(Cat cat) {
         System.out.println(cat.getName());
     }
-    static void printNameCatWrapper(CatWrapper catWrapper) {
-        System.out.println(catWrapper.getName());
-    }
 }
 class Cat {
     private String name;
+    public Cat() {
+        this("Имя по умолчанию");
+    }
     public Cat(String name) {
         this.name = name;
     }
@@ -30,15 +30,15 @@ class Cat {
         this.name = name;
     }
 }
-class CatWrapper {
+class CatWrapper extends Cat {
     private Cat originalCat;
-    CatWrapper(Cat cat) {
+    public CatWrapper(Cat cat) {
         originalCat = cat;
     }
-    String getName() {
+    public String getName() {
         return "Кот по имени " + originalCat.getName();
     }
-    void setName(String name) {
+    public void setName(String name) {
         originalCat.setName(name);
     }
 }
