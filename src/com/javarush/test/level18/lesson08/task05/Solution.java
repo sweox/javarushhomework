@@ -34,5 +34,22 @@ public class Solution {
 
         void setHeaderText(String newHeaderText);
     }
-
 }
+
+
+/*
+
+public class Solution {
+    public class TableInterfaceWrapper {
+
+    }
+
+    public interface ATableInterface {
+        void setModel(List rows);
+
+        String getHeaderText();
+
+        void setHeaderText(String newHeaderText);
+    }
+}
+*/
