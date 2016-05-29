@@ -28,10 +28,13 @@ public class Solution {
             alphabet.add(j);
         }
 
-
         while(inputStream.available()>0) {
             if (alphabet.contains((char)inputStream.read()))
                 countChar = countChar + 1;
+//            int d = inputStream.read();
+//            if ((d>65 && d<= 90) || (d >= 97 && d <= 122)) {
+//                countChar++;
+//            }
         }
         inputStream.close();
         System.out.println(countChar);
