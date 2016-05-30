@@ -25,6 +25,7 @@ public class Solution {
         }
         inputStream.close();
         System.out.format("%.2f",(kolProbelov/(kolToken*1.0)) * 100);
+//        System.out.println(String.format(Locale.ENGLISH, "%.2f", result));
     }
 }
 
