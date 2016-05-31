@@ -10,6 +10,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
@@ -20,7 +21,9 @@ public class Solution {
         if (inputStream.available() > 0) {
             byte[] data = new byte[inputStream.available()];
             int count = inputStream.read(data);
-            outputStream.write(invertData(data), 0, count);
+            //outputStream.write(invertData(data), 0, count);
+            //invert(data, 0);
+            outputStream.write(invert(data, 0), 0, count);
         }
         reader.close();
         inputStream.close();
@@ -34,6 +37,15 @@ public class Solution {
             data[data.length - 1 - i] = tmp;
         }
         return data;
+    }
+    public static byte[] invert(byte[] arr, int start) {
+        if(start < arr.length/2) {
+            byte tmp = arr[start];
+            arr[start] = arr[arr.length - 1 - start];
+            arr[arr.length - 1 - start] = tmp;
+            invert(arr, start + 1);
+        }
+        return arr;
     }
 }
 
