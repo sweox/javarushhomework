@@ -40,6 +40,10 @@ public class Solution {
 }
 //Мой вариант почему-то не работал!!!!
 /*
+    Главное в этой задачке не открывать поток записи в файл, пока не закроешь поток чтения из того же файла.
+*/
+
+/*
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
