@@ -40,20 +40,24 @@ public class Solution {
         for(int i = 0; i < floatM.length; i++) {
             intM[i] = Math.round(floatM[i]);
         }
-        byte[] byteM = new byte[intM.length];
-        for(int i = 0; i < byteM.length; i++) {
-            byteM[i] = (byte)intM[i];
-        }
 
+//        System.out.println(Arrays.toString(intM));
+//        String strr = Arrays.toString(intM);
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName2));
-        for (int i = 0; i < intM.length; i++) {
-            bufferedWriter.write((byte)6);
-            if(intM[i] != intM.length - 1) {
+//        for(int i = 0; i < strM.length; i++) {
+//            bufferedWriter.write(Math.round(Float.parseFloat(strM[i])) + " ");
+//        }
+//        for(int i = 0; i < strM.length; i++) {
+//            bufferedWriter.write(intM[i]);
+//        }
+        for(int i = 0; i < intM.length; i++) {
+            bufferedWriter.write(intM[i] + "");
+            if(i != (intM.length - 1)) {
                 bufferedWriter.write(" ");
             }
         }
+
         bufferedWriter.close();
-        //System.out.println(Arrays.toString(byteM));
 
     }
 }
