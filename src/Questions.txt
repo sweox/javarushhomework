@@ -98,6 +98,13 @@ http://book.itep.ru/10/ascii.htm    Коды символов ASCII
 =============================================
 http://habrahabr.ru/post/164487/        Многопоточность в Java
 =====================================================
+    level18.lesson10.home06
+\r = CR (Carriage Return) // Used as a new line character in Mac OS before X
+\n = LF (Line Feed) // Used as a new line character in Unix/Mac OS X
+\r\n = CR + LF // Used as a new line character in Windows
+==============================================
+
+
 Dec 2013 лекция 20
 Class IllegalMonitorStateException
 
