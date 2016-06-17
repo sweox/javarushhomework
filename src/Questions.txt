@@ -33,6 +33,7 @@ Containers(в Java Collection) hash.equal.tostr
 =================================================================
 
                     LEVEL 16
+https://habrahabr.ru/post/132374/     Маленькие хитрости Java. Часть 2
 com.javarush.test.level16.lesson13.home03;
 Потоки
     //count--;
