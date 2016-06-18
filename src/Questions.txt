@@ -104,7 +104,18 @@ http://habrahabr.ru/post/164487/        Многопоточность в Java
 \n = LF (Line Feed) // Used as a new line character in Unix/Mac OS X
 \r\n = CR + LF // Used as a new line character in Windows
 ==============================================
+    test.level18.lesson10.home10
+так Iterator там будет в любом случае, но по новому синтаксису — неявный!
+если же ты настаиваешь на явном итераторе, то предлагаю сравнить такие два варианта кода:
 
+for (final Iterator<Map.Entry<Integer, Integer>> i = map.entrySet().iterator(); i.hasNext(); ) {
+  final Map.Entry<Integer, Integer> entry = i.next();
+  System.out.println("" + entry.getKey() + "=" + entry.getValue());
+}
+и
+for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
+  System.out.println("" + entry.getKey() + "=" + entry.getValue());
+}
 
 Dec 2013 лекция 20
 Class IllegalMonitorStateException
