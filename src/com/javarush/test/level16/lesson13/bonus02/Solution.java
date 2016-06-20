@@ -191,3 +191,50 @@ public class Solution {
         то, независимо от того из какой нити этот метод был вызван, флаг будет выброшен именно у this нити, т.е. у
         того экземпляра Thread, в котором он был вызван.
         */
+
+/*
+
+    Вариант с циклом while, который работает пока isInterrupted = false на мой взгляд — просто подгон под нужный нам результат, это не может считаться приемлемым.
+        Почему? Это нормальная практика.
+        Я, например, пробовал прописать в методе showWarning() после интеррапта this.sleep(1), но почему то остановки все равно не происходило, хотя по идее sleep() должен делать проверку флага прерывания и выбрасывать interrupted exception. Но почему-то этого тоже не происходит?
+        Если взглянуть на джавадок метода sleep():
+        Throws:
+        IllegalArgumentException — if the value of millis is negative
+        InterruptedException — if any thread has interrupted the current thread. The interrupted status of the current thread is cleared when this exception is thrown.
+        то станет понятно, что после того как он бросает эксепшен, флаг прерывания сбрасывается обратно на false, и когда рантайм возвращается обратно к while, isInterrupted() == false.
+        Если нужно это обойти это, то в блоке catch нужно снова вызвать метод interrupt(), тогда при выходе из него будет isInterrupted() == true, и цикл while (!isInterrupted()) прервётся.
+        маленькая демонстрация
+
+public class ThreadInterruptTest {
+    public static void main(String[] args) {
+        new MyThread().start();
+    }
+
+    static class MyThread extends Thread {
+        @Override
+        public void run() {
+            int cycleCount = 3;
+            while (!isInterrupted() && cycleCount > 0) {
+                System.out.println("cycleCount: " + cycleCount);
+                try {
+                    interrupt();
+                    System.out.println("right after interrupt(), isInterrupted(): "
+                            + isInterrupted());
+                    sleep(1);
+                } catch (InterruptedException e) {
+                    System.out.println("inside catch isInterrupted(): " + isInterrupted());
+                    cycleCount--;
+                    interrupt(); //uncomment this for set interrupt flag to true again
+                    System.out.println("inside catch isInterrupted(): " + isInterrupted());
+
+                }
+            }
+        }
+    }
+}
+Ну, со слипом я уже сам вчера разобрался — я просто не понимал, что он выбрасывает экепшн в том случае если у ВЫЗЫВАЮЩЕЙ его нити стоит флаг на прерывание, а вызывающей нитью в данном случае (вызова метода showWarning) будет являться метод main, у которого естественно никакого прерывания нет.
+
+В общем-то я практически со всем разобрался, просто на мой взгляд задание странно сформулировано, потому что по факту ничто не может реально остановить нить.
+
+В любом случае спасибо за ответ.
+*/
