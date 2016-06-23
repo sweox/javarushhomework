@@ -32,7 +32,7 @@ public class Solution {
         public String getCountryName() {
             String tmpCountryName = "";
             for(Map.Entry<String, String> c:countries.entrySet()) {
-                if(c.equals(incomeData.getCountryCode())) {
+                if(c.getKey().equals(incomeData.getCountryCode())) {
                     tmpCountryName = c.getValue();
                 }
             }
@@ -42,21 +42,30 @@ public class Solution {
             return incomeData.getContactLastName() + ", " + incomeData.getContactFirstName();
         }
         public String getPhoneNumber() {
-            List<Character> list = new ArrayList<>();
-            int tmpPhoneCode = incomeData.getCountryPhoneCode();
-            Integer tmpPhoneNumber = incomeData.getPhoneNumber();
-            char[] numberToChar = tmpPhoneNumber.toString().toCharArray();
-            for(int i = 0; i < numberToChar.length; i++) {
-                list.add(numberToChar[i]);
-            }
-            if(list.size() < 10) {
-                while(list.size() < 10) {
-                    list.add(0, '0');
+//            List<Character> list = new ArrayList<>();
+//            int tmpPhoneCode = incomeData.getCountryPhoneCode();
+//            Integer tmpPhoneNumber = incomeData.getPhoneNumber();
+//            char[] numberToChar = tmpPhoneNumber.toString().toCharArray();
+//            for(int i = 0; i < numberToChar.length; i++) {
+//                list.add(numberToChar[i]);
+//            }
+//            if(list.size() < 10) {
+//                while(list.size() < 10) {
+//                    list.add(0, '0');
+//                }
+//            }
+//            return "+" + tmpPhoneCode + "(" + list.get(0) + list.get(1)
+//                    + list.get(2) + ")" + list.get(3) + list.get(4) +list.get(5)
+//                    + "-" + list.get(6) + list.get(7) + "-" + list.get(8) + list.get(9);
+            int i = incomeData.getCountryPhoneCode();
+            String s = String.valueOf(incomeData.getPhoneNumber());
+            if (s.length() < 10) {
+                while(s.length() < 10) {
+                    s = 0 + s;
                 }
             }
-            return "+" + tmpPhoneCode + "(" + list.get(0) + list.get(1)
-                    + list.get(2) + ")" + list.get(3) + list.get(4) +list.get(5)
-                    + "-" + list.get(6) + list.get(7) + "-" + list.get(8) + list.get(9);
+            return "+" + i + "(" + s.substring(0, 3) + ")" + s.substring(3, 6)
+                    + "-" + s.substring(6, 8) + "-" + s.substring(8, 10);
         }
     }
 
@@ -84,6 +93,52 @@ public class Solution {
         String getName();               //example Ivanov, Ivan
 
         String getPhoneNumber();        //example +38(050)123-45-67
+    }
+
+    public static void main(String[] args)
+    {
+        IncomeDataAdapter in = new IncomeDataAdapter(new One());
+        System.out.println(in.getCompanyName());
+        System.out.println(in.getCountryName());
+        System.out.println(in.getName());
+        System.out.println(in.getPhoneNumber());
+    }
+    static class One implements IncomeData {
+        @Override
+        public String getCountryCode()
+        {
+            return "UA";
+        }
+
+        @Override
+        public String getCompany()
+        {
+            return "JavaRush Ltd.";
+        }
+
+        @Override
+        public String getContactFirstName()
+        {
+            return "Ivan";
+        }
+
+        @Override
+        public String getContactLastName()
+        {
+            return "Ivanov";
+        }
+
+        @Override
+        public int getCountryPhoneCode()
+        {
+            return 38;
+        }
+
+        @Override
+        public int getPhoneNumber()
+        {
+            return 501234567;
+        }
     }
 }
 
