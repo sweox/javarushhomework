@@ -125,6 +125,7 @@ for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
 =============================================
     level19.lesson03.task05
 Изучить regex
+http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum
 ------------------------------------------
 
 
