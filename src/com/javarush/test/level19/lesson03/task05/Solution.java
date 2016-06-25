@@ -53,12 +53,36 @@ public class Solution {
         }
 
         public String getDialString() {
-            /*String conNumber = contact.getPhoneNumber();
-            return "callto://" + conNumber.substring(0, 3) + conNumber.substring(4, 7) +
-                    conNumber.substring(8, 11) + conNumber.substring(12, 14) +
-                    conNumber.substring(15, 17);*/
-            String conNumber = contact.getPhoneNumber();
-            return "callto://" + conNumber.replaceAll("[()-]", "");
+//=================1================= Не правильный
+//            String conNumber = contact.getPhoneNumber();
+//            return "callto://" + conNumber.substring(0, 3) + conNumber.substring(4, 7) +
+//                    conNumber.substring(8, 11) + conNumber.substring(12, 14) +
+//                    conNumber.substring(15, 17);
+
+//            ====2=====
+//            String conNumber = contact.getPhoneNumber();
+//            return "callto://" + contact.getPhoneNumber().replaceAll("[()-]", "");
+//            ===3====
+
+//            String conNumber = contact.getPhoneNumber();
+//            String str = "";
+//            char[] ch = conNumber.toCharArray();
+//            for(int i = 0; i < ch.length; i++) {
+//                if(Character.isDigit(ch[i])) {
+//                    str = str + ch[i];
+//                }
+//            }
+//            return "callto://+" + str;
+
+//            ===4===
+            String str = "";
+            byte[] bytes = contact.getPhoneNumber().getBytes();
+            for(byte j:bytes) {
+                if(j >= 48 && j<= 57) {
+                    str += (char)j;
+                }
+            }
+            return "callto://+" + str;
         }
     }
 
@@ -104,8 +128,8 @@ public class Solution {
         System.out.println(dataAdapter.getContactFirstName());
         System.out.println(dataAdapter.getContactLastName());
         System.out.println(dataAdapter.getDialString());
-    }
-    */
+    }*/
+
 }
 
 /*
