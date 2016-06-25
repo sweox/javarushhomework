@@ -122,6 +122,12 @@ for (final Iterator<Map.Entry<Integer, Integer>> i = map.entrySet().iterator(); 
 for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
   System.out.println("" + entry.getKey() + "=" + entry.getValue());
 }
+=============================================
+    level19.lesson03.task05
+Изучить regex
+------------------------------------------
+
+
 
 Dec 2013 лекция 20
 Class IllegalMonitorStateException
