@@ -127,6 +127,10 @@ for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
 Изучить regex
 http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum
 ------------------------------------------
+    level19.lesson05.task02
+\p{Blank} — A space or a tab: [ \t]
+\p{Space} — A whitespace character: [ \t\n\x0B\f\r]
+\s — A whitespace character: [ \t\n\x0B\f\r]
 
 
 
