@@ -126,6 +126,7 @@ for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
     level19.lesson03.task05
 Изучить regex
 http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html#sum
+https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html
 ------------------------------------------
     level19.lesson05.task02
 \p{Blank} — A space or a tab: [ \t]
@@ -142,7 +143,8 @@ String regex = "(\\b)[0-9]+(\\s|\\b)";
 Не нужно создавать группу, просто пишем "\\b[0-9]+\\b".
 Но ooevg прав — этот паттерн не учитывает буквы внутри слова. Но валидатор почему-то его принимает.
 ----------------------------------------------------------
-
+Процент решения задач
+http://info.javarush.ru/others/2014/12/13/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D0%BD%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87-.html
 
 
 Dec 2013 лекция 20
