@@ -116,3 +116,20 @@ public class Solution {
     }
 }
 */
+
+/*
+
+public class Solution {
+    public static List<String> words = new ArrayList<String>();
+
+    static {
+        words.add("файл");
+        words.add("вид");
+        words.add("В");
+    }
+
+    public static void main(String[] args)  {
+    }
+}
+
+*/
