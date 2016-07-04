@@ -29,6 +29,7 @@ public class Solution {
                 }
             }
             writerFile2.write(line, 0, line.length());
+            writerFile2.write(line);
             writer.write(line);
         }
         writerFile2.close();
