@@ -14,26 +14,27 @@ import java.io.*;
 public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String patchFileName1 = /*reader.readLine()*/ "c:/c.txt";
-        String patchFileName2 = /*reader.readLine()*/ "c:/c1.txt";
+        String patchFileName1 = reader.readLine();
+        String patchFileName2 = reader.readLine();
         BufferedReader readerFile1 = new BufferedReader(new FileReader(patchFileName1));
-        FileWriter writer = new FileWriter(patchFileName2);
-        BufferedWriter writerFile2 = new BufferedWriter(writer);
+        FileWriter writerFile2 = new FileWriter(patchFileName2);
 
         while(readerFile1.ready()) {
             String [] strArr = readerFile1.readLine().split(" ");
             String line = "";
             for(String c : strArr) {
                 if(c.toCharArray().length > 6) {
-                    line = line + c + ",";
+
+                    if(line.equals(""))
+                        line = line + c;
+                    line = line + "," + c;
                 }
             }
             writerFile2.write(line, 0, line.length());
-            writerFile2.write(line);
-            writer.write(line);
         }
+        reader.close();
+        readerFile1.close();
         writerFile2.close();
-        writer.close();
 
 
     }
