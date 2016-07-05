@@ -10,32 +10,44 @@ package com.javarush.test.level19.lesson10.home07;
 длинное,короткое,аббревиатура
 */
 import java.io.*;
+import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String patchFileName1 = reader.readLine();
-        String patchFileName2 = reader.readLine();
-        BufferedReader readerFile1 = new BufferedReader(new FileReader(patchFileName1));
-        FileWriter writerFile2 = new FileWriter(patchFileName2);
 
+        /*BufferedReader reader = new BufferedReader(new FileReader(*//*args[0]*//*  "c:/c.txt"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(*//*args[1]*//*  "c:/c1.txt"));
+        ArrayList<String> list = new ArrayList<String>();
+        while (reader.ready())
+        {
+            String[] str = reader.readLine().split(" ");
+            for (String g : str)
+                if (g.length()>6) list.add(g);
+        }
+        String x = "";
+        for (int i = 0; i < list.size()-1; i++)
+            x += list.get(i)+",";
+        x += list.get(list.size()-1);
+        writer.write(x);
+        reader.close();
+        writer.close();*/
+
+        BufferedReader readerFile1 = new BufferedReader(new FileReader(/*args[0]*/ "c:/c.txt"));
+        BufferedWriter writerFile2 = new BufferedWriter(new FileWriter(/*args[0]*/ "c:/c1.txt"));
+        String line = "";
         while(readerFile1.ready()) {
             String [] strArr = readerFile1.readLine().split(" ");
-            String line = "";
-            for(String c : strArr) {
-                if(c.toCharArray().length > 6) {
 
-                    if(line.equals(""))
-                        line = line + c;
-                    line = line + "," + c;
+            for(String c : strArr) {
+                if(c.length() > 6) {
+                    line = line + c + ",";
                 }
             }
-            writerFile2.write(line, 0, line.length());
         }
-        reader.close();
+
+        writerFile2.write(line.substring(0, line.length() - 1));
         readerFile1.close();
         writerFile2.close();
-
 
     }
 }
