@@ -17,6 +17,7 @@ package com.javarush.test.level19.lesson10.home08;
 */
 
 import java.io.*;
+import java.util.Arrays;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
@@ -25,10 +26,11 @@ public class Solution {
         readLine.close();
         BufferedReader readerFromFile = new BufferedReader(new FileReader(pathFileName));
         while(readerFromFile.ready()) {
+//            String str = readerFromFile.readLine();
             String str = readerFromFile.readLine();
             //revert(str);
-            revertRec(str.toCharArray(), 0);
-            System.out.println(str);
+            System.out.println(new String(revertRec(str.toCharArray(), 0)));
+            //System.out.println(str);
 
         }
         readerFromFile.close();
@@ -39,7 +41,7 @@ public class Solution {
         System.out.println(stringBuilder.reverse());
     }
 
-    public static void revertRec(char[] chArr, int off) {
+    public static char[] revertRec(char[] chArr, int off) {
         if(off < chArr.length/2)
         {
             char tmp = chArr[off];
@@ -50,7 +52,7 @@ public class Solution {
             revertRec(chArr, off);
         }
         //System.out.println(chArr);
-
+        return chArr;
     }
 }
 
