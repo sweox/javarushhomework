@@ -26,7 +26,6 @@ public class Solution {
         readLine.close();
         BufferedReader readerFromFile = new BufferedReader(new FileReader(pathFileName));
         while(readerFromFile.ready()) {
-//            String str = readerFromFile.readLine();
             String str = readerFromFile.readLine();
             //revert(str);
             System.out.println(new String(revertRec(str.toCharArray(), 0)));
