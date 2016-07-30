@@ -174,6 +174,37 @@ The inspection can be configured to use custom @Nullable
 Процент решения задач
 http://info.javarush.ru/others/2014/12/13/%D0%9F%D1%80%D0%BE%D1%86%D0%B5%D0%BD%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87-.html
 ----------------------
+===========================================
+    level20.lesson02.task02
+
+Разобраться с enum (valueOf) и SimpleDateFormat
++++
+Правильно ли я понял что для работы с датами нужно делать так:
+1. для инициализации поля private Date birthDate в методе setBirthDate используем такую конструкцию
+user.setBirthDate(new SimpleDateFormat("dd MM yyyy").parse("28 09 1970"));
+
+2. при записи этого поля в файл
+user.getBirthDate().getTime()
+
+в файле получаем строку, которая показывает сколько прошло секунд с какой то там базовой даты до 28 09 1970, это — 23320800000
+3. при чтении мы преобразуем эту строку в дату
+user.setBirthDate(new Date(Long.parseLong(reader.readLine())));
+
+но если захотим эту дату вывести на консоль просто вставив в sout
+System.out.println(javaRush.users.get(i).getBirthDate());
+
+то получим
+Mon Sep 28 00:00:00 IST 1970
+
+а если так:
+System.out.println(new SimpleDateFormat("dd MM yyyy").format(javaRush.users.get(i).getBirthDate()))
+
+то, наконец то получим то что нужно
+28 09 1970
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 Dec 2013 лекция 20
