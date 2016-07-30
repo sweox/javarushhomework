@@ -41,11 +41,6 @@ public class Solution {
             //e.printStackTrace();
             System.out.println("Oops, something wrong with save/load method");
         }
-        System.out.println("=======================");
-        Object obj = new Object();
-        System.out.println(obj.hashCode());
-        Object obj1 = new Object();
-        System.out.println(obj1.hashCode());
     }
 
     public static class ClassWithStatic {
