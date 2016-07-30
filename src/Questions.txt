@@ -204,6 +204,9 @@ System.out.println(new SimpleDateFormat("dd MM yyyy").format(javaRush.users.get(
 ----------------------------
     level20.lesson02.task03
 Прочитать про Properties, Enumeration, StringTokenizer
+---------------------------
+    level20.lesson02.task04
+Прочитать про рефлексию
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
