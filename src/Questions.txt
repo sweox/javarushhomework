@@ -203,7 +203,7 @@ System.out.println(new SimpleDateFormat("dd MM yyyy").format(javaRush.users.get(
 28 09 1970
 ----------------------------
     level20.lesson02.task03
-Прочитать про Properties, Enumeration
+Прочитать про Properties, Enumeration, StringTokenizer
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
