@@ -213,6 +213,7 @@ https://habrahabr.ru/post/128017/    Структуры данных в карт
     level20.lesson04.task01
 http://www.ibm.com/developerworks/ru/library/j-5things1/   Пять вещей, которые вы не знали о...
 сериализации Java-объектов
+http://www.journaldev.com/1789/java-reflection-example-tutorial   Java Reflection Example Tutorial
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
