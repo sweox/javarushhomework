@@ -242,6 +242,9 @@ http://stackoverflow.com/questions/1168348/java-serialization-readobject-vs-read
 
 http://javatutor.net/articles/using-readresolve
 Использование readResolve
+-----------------------------------
+    level20.lesson04.task04
+http://javateaching.blogspot.ru/2011/12/serialization-static-field.html  Сериализация статических полей
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
