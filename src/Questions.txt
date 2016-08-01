@@ -245,6 +245,8 @@ http://javatutor.net/articles/using-readresolve
 -----------------------------------
     level20.lesson04.task04
 http://javateaching.blogspot.ru/2011/12/serialization-static-field.html  Сериализация статических полей
+-----------------------------------------
+http://ccfit.nsu.ru/~deviv/courses/oop/java_ser_rus.html   Изучите секреты Java Serialization API
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
