@@ -28,6 +28,7 @@ public class Solution implements Serializable {
             out.writeObject(savedObject);
             out.close();
             Solution loadedObject = new Solution(27);
+            System.out.println(loadedObject);
             loadedObject = (Solution)in.readObject();
             System.out.println(savedObject);
             System.out.println(loadedObject);
