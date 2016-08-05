@@ -248,6 +248,17 @@ http://javateaching.blogspot.ru/2011/12/serialization-static-field.html  Сер�
 -----------------------------------------
 http://ccfit.nsu.ru/~deviv/courses/oop/java_ser_rus.html   Изучите секреты Java Serialization API
 http://darkraha.com/rus/java/api/serialized.php Справочник по java Сериализация
+-------------------------------------------
+    level20.lesson10.home01
+Непонятно с:
+@Override
+        public String toString()
+        {
+            return this.name;
+        }
+
+
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
