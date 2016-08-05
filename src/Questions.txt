@@ -256,6 +256,11 @@ http://darkraha.com/rus/java/api/serialized.php Справочник по java �
         {
             return this.name;
         }
+--------------------------------
+
+http://stackoverflow.com/questions/7144912/why-is-a-serializable-inner-class-not-serializable Why is a serializable inner class not serializable?
+http://oxygame.blogspot.com.by/2010/11/java.html   Изучаем Java: Сохранение объекта в файл. Сериализация
+https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html   Nested Classes
 
 
 
