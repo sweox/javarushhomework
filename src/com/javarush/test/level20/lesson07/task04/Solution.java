@@ -22,11 +22,11 @@ public class Solution implements Serializable {
     public static void main(String[] args) {
         System.out.println(new Solution(4));
         try {
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:/4.txt"));
+            //ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:/4.txt"));
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("c:/4.txt"));
             Solution savedObject = new Solution(32);
-            out.writeObject(savedObject);
-            out.close();
+            //out.writeObject(savedObject);
+            //out.close();
             Solution loadedObject = new Solution(27);
             System.out.println(loadedObject);
             loadedObject = (Solution)in.readObject();

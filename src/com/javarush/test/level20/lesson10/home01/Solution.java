@@ -1,11 +1,12 @@
 package com.javarush.test.level20.lesson10.home01;
 
+import java.io.*;
 import java.io.Serializable;
 
 /* Минимум изменений
 Используя минимум изменений кода сделайте так, чтобы сериализация класса C стала возможной.
 */
-
+/*
 public class Solution {
 
     public class A implements Serializable {
@@ -38,7 +39,7 @@ public class Solution {
             this.name = name;
         }
     }
-}
+}*/
 /*
 
 public class Solution {
@@ -76,7 +77,6 @@ public class Solution {
 }
 */
 
-/*
 
 public class Solution
 {
@@ -91,7 +91,7 @@ public class Solution
 
         public A(String name)
         {
-            this.name += name;
+            this.name = this.name + name;
         }
 
         @Override
@@ -130,19 +130,18 @@ public class Solution
 
     public static void main(String[] args) throws IOException, ClassNotFoundException
     {
-//        A a = new A("-=this is A=-");
-//        B b = new B("-=this is B=-");
-//        C c = new C("-=this is C=-");
-//        System.out.println(a);
-//        System.out.println(b);
-//        System.out.println(c);
-        C c2 = new C("c222");
-        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:/77.txt"));
-        ObjectInputStream in = new ObjectInputStream(new FileInputStream("c:/77.txt"));
-        out.writeObject(c2);
-        out.close();
-        C c3 = new C("df");
+        A a = new A("  -=this is A=-");
+        B b = new B("  -=this is B=-");
+        C c = new C("  -=this is C=-");
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+//        C c2 = new C("c222");
+//        ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("c:/77.txt"));
+//        ObjectInputStream in = new ObjectInputStream(new FileInputStream("c:/77.txt"));
+//        out.writeObject(c2);
+//        out.close();
+//        C c3 = new C("df");
     }
 }
 
-*/
