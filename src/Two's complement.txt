@@ -10,4 +10,7 @@ https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D
 http://stackoverflow.com/questions/10430582/primitive-data-types-in-java  Primitive Data Types in Java
 http://stackoverflow.com/questions/842817/how-does-java-convert-int-into-byte    How does Java convert int into byte?
 
+http://stackoverflow.com/questions/1049722/what-is-2s-complement   What is “2's Complement”?
+
+
 byte in Java is signed
