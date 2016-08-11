@@ -15,6 +15,7 @@ public class Solution {
         this.first = first;
         this.last = last;
     }
+/*
 
     public boolean equals(Object obj) {
         if(obj == null)
@@ -31,6 +32,28 @@ public class Solution {
     public int hashCode() {
         return 31 * (first == null ? 0 : first.hashCode())
                 + (last != null ? last.hashCode() : 0);
+    }
+*/
+
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Solution solution = (Solution) o;
+
+        if (first != null ? !first.equals(solution.first) : solution.first != null) return false;
+        return last != null ? last.equals(solution.last) : solution.last == null;
+
+    }
+
+    @Override
+    public int hashCode()
+    {
+        int result = first != null ? first.hashCode() : 0;
+        result = 31 * result + (last != null ? last.hashCode() : 0);
+        return result;
     }
 
     public static void main(String[] args) {
