@@ -284,7 +284,7 @@ http://www.slideshare.net/MERA_school/5-java-lecture-io
 В числе 2 в степени n в единицу выставлен только (n+1)-й бит. Все остальные — нули.
 http://habrahabr.ru/post/187606/
 ----------------------
-
+    level21.lesson05.task01
 https://javarevisited.blogspot.com/2011/02/how-to-write-equals-method-in-java.html
 
 
