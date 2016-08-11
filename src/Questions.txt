@@ -286,7 +286,8 @@ http://habrahabr.ru/post/187606/
 ----------------------
     level21.lesson05.task01
 https://javarevisited.blogspot.com/2011/02/how-to-write-equals-method-in-java.html
-
+https://habrahabr.ru/post/169733/   Заметки о реализации hashCode() в Java
+https://habrahabr.ru/post/168195/   Разбираемся с hashCode() и equals()
 
 
 
