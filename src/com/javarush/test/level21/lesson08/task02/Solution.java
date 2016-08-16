@@ -6,7 +6,7 @@ package com.javarush.test.level21.lesson08.task02;
 Метод main изменять нельзя.
 */
 
-public class Solution {
+public class  Solution {
     public static void main(String[] args) {
         Tree tree = new Tree("willow", new String[]{"s1", "s2", "s3", "s4"});
         Tree clone = null;
