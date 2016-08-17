@@ -288,14 +288,16 @@ http://habrahabr.ru/post/187606/
 https://javarevisited.blogspot.com/2011/02/how-to-write-equals-method-in-java.html
 https://habrahabr.ru/post/169733/   Заметки о реализации hashCode() в Java
 https://habrahabr.ru/post/168195/   Разбираемся с hashCode() и equals()
-
+---------------------------
 http://howtodoinjava.com/core-java/cloning/a-guide-to-object-cloning-in-java/
 http://info.javarush.ru/translation/2014/03/22/Java-Core-%D0%92%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BA-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E-%D1%87-3.html
 https://habrahabr.ru/post/132465/   Плохая Java или как не надо делать
 http://info.javarush.ru/translation/2013/10/08/%D0%A7%D0%B0%D1%81%D1%82%D0%BE-%D0%B7%D0%B0%D0%B4%D0%B0%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B5-%D0%BD%D0%B0-%D1%81%D0%BE%D0%B1%D0%B5%D1%81%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%D1%85-%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B-%D0%BF%D0%BE-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%B0%D0%BC-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%D0%BC-%D0%B2-Java-%D0%A7%D0%B0%D1%81%D1%82%D1%8C-1-.html
 http://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.6.1
 http://indragni.com/blog/2012/07/24/java-cloning-tutorial/
-
+------------------------------
+    level21.lesson10.task01
+http://netjs.blogspot.com.by/2015/05/try-with-resources-java7.html
 
 
 
