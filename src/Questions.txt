@@ -300,6 +300,10 @@ http://indragni.com/blog/2012/07/24/java-cloning-tutorial/
 http://netjs.blogspot.com.by/2015/05/try-with-resources-java7.html
 http://stackoverflow.com/questions/2506488/when-is-the-finalize-method-called-in-java
 https://habrahabr.ru/post/183344/
+http://src-code.net/sborka-musora-i-metod-finalize/
+https://habrahabr.ru/post/130370/
+
+
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
