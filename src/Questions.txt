@@ -302,7 +302,8 @@ http://stackoverflow.com/questions/2506488/when-is-the-finalize-method-called-in
 https://habrahabr.ru/post/183344/
 http://src-code.net/sborka-musora-i-metod-finalize/
 https://habrahabr.ru/post/130370/
-
+http://www.javamadesoeasy.com/2015/05/exceptions-top-60-interview-questions_16.html
+http://stackoverflow.com/questions/18683996/object-finalize-method-ignoring-exceptions-thrown
 
 
 
