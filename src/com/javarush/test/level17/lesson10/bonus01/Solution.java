@@ -40,6 +40,7 @@ public class Solution {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
         allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
 
+//        new TestThread().run();
 
     }
 
@@ -115,3 +116,53 @@ public class Solution {
 
     }
 }
+// class TestThread extends Thread {
+//    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//    public TestThread() {
+//        start();
+//    }
+//
+//    @Override
+//    public void run() {
+//        while (true) {
+//            String s = "";
+//            try {
+//                s = reader.readLine();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            if (s.equals(""))
+//                break;
+//            else
+//                try {
+//                    Solution.main(s.split(" "));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                }
+//        }
+//    }
+//}
+
+
+
+
+/*
+public class Solution {
+    public static List<Person> allPeople = new ArrayList<Person>();
+    static {
+        allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
+        allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
+
+    }
+
+
+
+    public static void main(String[] args)
+    {
+        //start here - начни тут
+    }
+}
+
+*/
