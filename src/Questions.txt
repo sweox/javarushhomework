@@ -306,7 +306,20 @@ http://www.javamadesoeasy.com/2015/05/exceptions-top-60-interview-questions_16.h
 http://stackoverflow.com/questions/18683996/object-finalize-method-ignoring-exceptions-thrown
 
 http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3
+-------------------------------------
+    level17.lesson10.bonus01;
+Почему-то так не работает:
+         boolean f = strArr[2].equals("м") ? allPeople.add(Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3]))) :
+                   allPeople.add(Person.createFemale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3])));
+А так нормально:
+allPeople.add(strArr[2].equals("м") ?
+            Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3])) :
+            Person.createFemale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3])));
 
+if (strArr[2].equals("м"))
+                allPeople.add(Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3])));
+            else
+                allPeople.add(Person.createFemale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3])));
 
 
 
