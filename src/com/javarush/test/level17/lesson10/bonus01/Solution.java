@@ -59,7 +59,7 @@ public class Solution {
         //start here - начни тут
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String strCons;
-        while((strCons = reader.readLine()) != "exit")
+        while(!(strCons = reader.readLine()).equals("exit"))
         {
             String[] ar = {strCons};
             args = ar;
@@ -85,7 +85,7 @@ public class Solution {
             {
 
 
-                Person old = allPeople.get(Integer.parseInt(strArr[1])).;
+                Person old = allPeople.get(Integer.parseInt(strArr[1]));
                 Person change;
 
                 if (strArr[3].equals("м"))
