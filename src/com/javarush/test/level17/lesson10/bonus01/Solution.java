@@ -33,15 +33,6 @@ id соответствует индексу в списке
 Пример параметров: -c Миронов м 15/04/1990
 */
 
-/**
- *
- -c Миронов м 15/04/1990
- -c Смиронов ж 29/12/2016
- -i 3
- -i 2
-
- -u 3 Роонов м 15/04/1990
- */
 
 public class Solution {
     public static List<Person> allPeople = new ArrayList<Person>();
@@ -57,46 +48,40 @@ public class Solution {
     public static void main(String[] args) throws ParseException, IOException
     {
         //start here - начни тут
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String strCons;
-        while(!(strCons = reader.readLine()).equals("exit"))
-        {
-            String[] ar = {strCons};
-            args = ar;
 
 
-            String[] strArr = args[0].split(" ");
-            if (strArr[0].equals("-c"))
+
+            if (args[0].equals("-c"))
             {
                 Person addPerson;
-                if (strArr[2].equals("м"))
+                if (args[2].equals("м"))
                 {
-                    addPerson = Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3]));
+                    addPerson = Person.createMale(args[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[3]));
                     allPeople.add(addPerson);
                 } else
                 {
-                    addPerson = Person.createFemale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3]));
+                    addPerson = Person.createFemale(args[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[3]));
                     allPeople.add(addPerson);
                 }
                 System.out.println(allPeople.indexOf(addPerson));
             }
 
-            if (strArr[0].equals("-u"))
+            if (args[0].equals("-u"))
             {
 
 
-                Person old = allPeople.get(Integer.parseInt(strArr[1]));
+                Person old = allPeople.get(Integer.parseInt(args[1]));
                 Person change;
 
-                if (strArr[3].equals("м"))
+                if (args[3].equals("м"))
                 {
-                    change = Person.createMale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
+                    change = Person.createMale(args[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[4]));
                     old.setName(change.getName());
                     old.setSex(change.getSex());
                     old.setBirthDay(change.getBirthDay());
                 } else
                 {
-                    change = Person.createFemale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
+                    change = Person.createFemale(args[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(args[4]));
                     old.setName(change.getName());
                     old.setSex(change.getSex());
                     old.setBirthDay(change.getBirthDay());
@@ -104,17 +89,17 @@ public class Solution {
 
 
             }
-            if (strArr[0].equals("-d"))
+            if (args[0].equals("-d"))
             {
-                Person forLogRemone = allPeople.get(Integer.parseInt(strArr[1]));
+                Person forLogRemone = allPeople.get(Integer.parseInt(args[1]));
                 forLogRemone.setBirthDay(null);
                 forLogRemone.setName(null);
                 forLogRemone.setSex(null);
             }
-            if (strArr[0].equals("-i"))
+            if (args[0].equals("-i"))
             {
                 String sexFromEnum;
-                Person getPerson = allPeople.get(Integer.parseInt(strArr[1]));
+                Person getPerson = allPeople.get(Integer.parseInt(args[1]));
                 if (getPerson.getSex() == Sex.MALE)
                 {
                     sexFromEnum = "м";
@@ -125,7 +110,7 @@ public class Solution {
             }
 
 
-        }
+
 
 
     }
