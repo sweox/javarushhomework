@@ -33,6 +33,16 @@ id соответствует индексу в списке
 Пример параметров: -c Миронов м 15/04/1990
 */
 
+/**
+ *
+ -c Миронов м 15/04/1990
+ -c Смиронов ж 29/12/2016
+ -i 3
+ -i 2
+
+ -u 3 Роонов м 15/04/1990
+ */
+
 public class Solution {
     public static List<Person> allPeople = new ArrayList<Person>();
     static {
@@ -51,8 +61,8 @@ public class Solution {
         String strCons;
         while((strCons = reader.readLine()) != "exit")
         {
-            //String[] ar =
-            args[0] = strCons;
+            String[] ar = {strCons};
+            args = ar;
             //}
 
             String[] strArr = args[0].split(" ");
@@ -73,12 +83,12 @@ public class Solution {
 
             if (strArr[0].equals("-u"))
             {
-                if (strArr[3].equals("м"))
-                {
-                    Person old = allPeople.get(Integer.parseInt(args[1]));
+//                if (strArr[3].equals("м"))
+//                {
+                    Person old = allPeople.get(Integer.parseInt(strArr[1]));
                     Person change;
 
-                    if (strArr[3].equals("m"))
+                    if (strArr[3].equals("м"))
                     {
                         change = Person.createMale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
                         old.setName(change.getName());
@@ -92,11 +102,11 @@ public class Solution {
                         old.setBirthDay(change.getBirthDay());
                     }
 
-                }
+//                }
             }
             if (strArr[0].equals("-d"))
             {
-                Person forLogRemone = allPeople.get(Integer.parseInt(strArr[0]));
+                Person forLogRemone = allPeople.get(Integer.parseInt(strArr[1]));
                 forLogRemone.setBirthDay(null);
                 forLogRemone.setSex(null);
                 forLogRemone.setBirthDay(null);
