@@ -63,7 +63,7 @@ public class Solution {
         {
             String[] ar = {strCons};
             args = ar;
-            //}
+
 
             String[] strArr = args[0].split(" ");
             if (strArr[0].equals("-c"))
@@ -83,33 +83,33 @@ public class Solution {
 
             if (strArr[0].equals("-u"))
             {
-//                if (strArr[3].equals("м"))
-//                {
-                    Person old = allPeople.get(Integer.parseInt(strArr[1]));
-                    Person change;
 
-                    if (strArr[3].equals("м"))
-                    {
-                        change = Person.createMale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
-                        old.setName(change.getName());
-                        old.setSex(change.getSex());
-                        old.setBirthDay(change.getBirthDay());
-                    } else
-                    {
-                        change = Person.createFemale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
-                        old.setName(change.getName());
-                        old.setSex(change.getSex());
-                        old.setBirthDay(change.getBirthDay());
-                    }
 
-//                }
+                Person old = allPeople.get(Integer.parseInt(strArr[1])).;
+                Person change;
+
+                if (strArr[3].equals("м"))
+                {
+                    change = Person.createMale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
+                    old.setName(change.getName());
+                    old.setSex(change.getSex());
+                    old.setBirthDay(change.getBirthDay());
+                } else
+                {
+                    change = Person.createFemale(strArr[2], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[4]));
+                    old.setName(change.getName());
+                    old.setSex(change.getSex());
+                    old.setBirthDay(change.getBirthDay());
+                }
+
+
             }
             if (strArr[0].equals("-d"))
             {
                 Person forLogRemone = allPeople.get(Integer.parseInt(strArr[1]));
                 forLogRemone.setBirthDay(null);
+                forLogRemone.setName(null);
                 forLogRemone.setSex(null);
-                forLogRemone.setBirthDay(null);
             }
             if (strArr[0].equals("-i"))
             {
@@ -121,12 +121,11 @@ public class Solution {
                 } else
                     sexFromEnum = "ж";
                 System.out.println(getPerson.getName() + " " + sexFromEnum + " " +
-                        new SimpleDateFormat("dd-MMM-yyyy").format(getPerson.getBirthDay()));
+                        new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH).format(getPerson.getBirthDay()));
             }
 
 
         }
-
 
 
     }
