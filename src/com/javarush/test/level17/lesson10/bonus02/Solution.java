@@ -1,6 +1,9 @@
 package com.javarush.test.level17.lesson10.bonus02;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -40,28 +43,67 @@ public class Solution {
     public static void main(String[] args) {
         //start here - начни тут
 
-        String [] str = {"-u"};
+        String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
         args = str;
 
+
+
+        try {
         switch (args[0]) {
-            case ("-c") : {
-                System.out.println("-c");
+            case "-c": {
+                //System.out.println(Arrays.toString(arrayCopy(args, 1)));
+
+                addPeople(arrayCopyMinusZerroPosition(args));
                 break;
             }
-            case ("-u") : {
+            case "-u": {
                 System.out.println("-u");
                 break;
             }
-            case ("-d") : {
+            case "-d": {
 
                 break;
             }
-            case ("-i") : {
+            case "-i": {
 
                 break;
             }
 
 
         }
+    }
+    catch (ParseException e) {}
+    }
+     static SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
+
+    static void addPeople(String... strAr) throws ParseException
+    {
+        Person person = null;
+        for (int i = 0; i < strAr.length; i += 3) {
+            if (strAr[i + 1].equals("м")) {
+                person = Person.createMale(strAr[i], date.parse(strAr[i + 2]));
+            }
+            else {
+                person = Person.createFemale(strAr[i], date.parse(strAr[i + 2]));
+            }
+            allPeople.add(person);
+            System.out.println(allPeople.indexOf(person));
+        }
+
+
+    }
+    void updatePeople() {
+
+    }
+    void logicDeletePeople() {
+
+    }
+    static void infoIdPeople() {
+
+    }
+    static String[] arrayCopyMinusZerroPosition(String[] srs) {
+        String[] dst = new String[srs.length - 1];
+        System.arraycopy(srs, 1, dst, 0, srs.length - 1);
+        return dst;
     }
 }
