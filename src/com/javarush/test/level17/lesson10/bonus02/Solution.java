@@ -1,5 +1,8 @@
 package com.javarush.test.level17.lesson10.bonus02;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,21 +41,22 @@ public class Solution {
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
         allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
+        System.out.println("Before Thread");
+        new ConcThread().start();
+        System.out.println("After thread");
     }
 
     public static void main(String[] args) {
         //start here - начни тут
 
-        String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
-        args = str;
+        //String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
+        //args = str;
         String[] arCopyWithOutZeroIndex = arrayCopyMinusZerroPosition(args);
 
 
         try {
         switch (args[0]) {
             case "-c": {
-                //System.out.println(Arrays.toString(arrayCopy(args, 1)));
-
                 addPeople(arCopyWithOutZeroIndex);
                 break;
             }
@@ -90,8 +94,20 @@ public class Solution {
             System.out.println(allPeople.indexOf(person));
         }
     }
-    static void updatePeople(String[] strAr) {
+    static void updatePeople(String[] strAr) throws ParseException
+    {
+        for (int i = 0; i < strAr.length; i+=3) {
+            Person updPerson = allPeople.get(Integer.parseInt(strAr[i]));
+            updPerson.setName(strAr[i + 1]);
+            updPerson.setBirthDay(date.parse(strAr[i + 3]));
+            if (strAr[i + 2].equals("м")) {
 
+                updPerson.setSex(Sex.MALE);
+            }
+            else {
+                updPerson.setSex(Sex.FEMALE);
+            }
+        }
 
     }
     static void logicDeletePeople() {
@@ -104,5 +120,22 @@ public class Solution {
         String[] dst = new String[srs.length - 1];
         System.arraycopy(srs, 1, dst, 0, srs.length - 1);
         return dst;
+    }
+}
+
+class ConcThread extends Thread {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public void run() {
+
+        //try
+        //{
+            //String s = reader.readLine();
+            //String[] argsCopy = reader.readLine().split(" ");
+            String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
+            //Solution.main(argsCopy);
+            Solution.main(str);
+        //}
+        //catch (IOException e) {}
+
     }
 }
