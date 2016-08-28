@@ -45,7 +45,7 @@ public class Solution {
 
         String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
         args = str;
-
+        String[] arCopyWithOutZeroIndex = arrayCopyMinusZerroPosition(args);
 
 
         try {
@@ -53,11 +53,11 @@ public class Solution {
             case "-c": {
                 //System.out.println(Arrays.toString(arrayCopy(args, 1)));
 
-                addPeople(arrayCopyMinusZerroPosition(args));
+                addPeople(arCopyWithOutZeroIndex);
                 break;
             }
             case "-u": {
-                System.out.println("-u");
+                updatePeople(arCopyWithOutZeroIndex);
                 break;
             }
             case "-d": {
@@ -89,13 +89,12 @@ public class Solution {
             allPeople.add(person);
             System.out.println(allPeople.indexOf(person));
         }
+    }
+    static void updatePeople(String[] strAr) {
 
 
     }
-    void updatePeople() {
-
-    }
-    void logicDeletePeople() {
+    static void logicDeletePeople() {
 
     }
     static void infoIdPeople() {
