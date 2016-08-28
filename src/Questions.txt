@@ -94,9 +94,14 @@ http://info.javarush.ru/JavaRush_tasks_discussion/2013/08/31/level17-lesson04-ta
 get-теры можно не синхронизировать.
 name можно не использовать.
 --------------------------------------
-test.level17.lesson10.home09
+    level17.lesson10.home09
 Что такое транзакционность???
 --------------------------------------------------------------------
+    level17.lesson10.bonus02
+Прочитать про NoClassDefFoundError
+===================================================
+
+
     level18.lesson05.task02
 https://habrahabr.ru/post/178405/    Правильно освобождаем ресурсы в Java
 http://book.itep.ru/10/ascii.htm    Коды символов ASCII
