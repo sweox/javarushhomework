@@ -3,12 +3,10 @@ package com.javarush.test.level17.lesson10.bonus02;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /* CRUD 2
 CrUD Batch - multiple Creation, Updates, Deletion
@@ -41,45 +39,57 @@ public class Solution {
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
         allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
-        System.out.println("Before Thread");
-        new ConcThread().start();
-        System.out.println("After thread");
+
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         //start here - начни тут
 
         //String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
         //args = str;
-        String[] arCopyWithOutZeroIndex = arrayCopyMinusZerroPosition(args);
+//        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//        while (true)
+//        {
+//            try
+//            {
+//                String[] s = reader.readLine().split(" ");
+//                args = s;
+//            }
+//            catch (IOException e)
+//            {
+//                e.printStackTrace();
+//            }
 
 
-        try {
-        switch (args[0]) {
-            case "-c": {
-                addPeople(arCopyWithOutZeroIndex);
-                break;
+            String[] arCopyWithOutZeroIndex = arrayCopyMinusZerroPosition(args);
+            try
+            {
+                switch (args[0])
+                {
+                    case "-c": {
+                        addPeople(arCopyWithOutZeroIndex);
+                        break;
+                    }
+                    case "-u": {
+                        updatePeople(arCopyWithOutZeroIndex);
+                        break;
+                    }
+                    case "-d": {
+                        logicDeletePeople(arCopyWithOutZeroIndex);
+                        break;
+                    }
+                    case "-i": {
+                        infoIdPeople(arCopyWithOutZeroIndex);
+                        break;
+                    }
+                }
             }
-            case "-u": {
-                updatePeople(arCopyWithOutZeroIndex);
-                break;
-            }
-            case "-d": {
-
-                break;
-            }
-            case "-i": {
-
-                break;
-            }
-
-
-        }
+            catch (ParseException e) {}
+//        }
     }
-    catch (ParseException e) {}
-    }
-     static SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy");
 
+    static SimpleDateFormat date = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
     static void addPeople(String... strAr) throws ParseException
     {
         Person person = null;
@@ -94,9 +104,8 @@ public class Solution {
             System.out.println(allPeople.indexOf(person));
         }
     }
-    static void updatePeople(String[] strAr) throws ParseException
-    {
-        for (int i = 0; i < strAr.length; i+=3) {
+    static void updatePeople(String[] strAr) throws ParseException {
+        for (int i = 0; i < strAr.length; i+=4) {
             Person updPerson = allPeople.get(Integer.parseInt(strAr[i]));
             updPerson.setName(strAr[i + 1]);
             updPerson.setBirthDay(date.parse(strAr[i + 3]));
@@ -110,10 +119,27 @@ public class Solution {
         }
 
     }
-    static void logicDeletePeople() {
+    static void logicDeletePeople(String... strAr) {
+        for (String elem : strAr) {
+            Person personForLogDelete = allPeople.get(Integer.parseInt(elem));
+            personForLogDelete.setBirthDay(null);
+            personForLogDelete.setSex(null);
+            personForLogDelete.setName(null);
+        }
 
     }
-    static void infoIdPeople() {
+    static void infoIdPeople(String[] strAr) {
+        for (String elemForPrint : strAr) {
+            String sex = "";
+            SimpleDateFormat date = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+            Person personForPrint = allPeople.get(Integer.parseInt(elemForPrint));
+            if (personForPrint.getSex() == Sex.MALE)
+                sex = "м";
+            else
+                sex = "ж";
+            System.out.println(personForPrint.getName() + " " +
+            sex + " " + date.format(personForPrint.getBirthDay()));
+        }
 
     }
     static String[] arrayCopyMinusZerroPosition(String[] srs) {
@@ -123,19 +149,23 @@ public class Solution {
     }
 }
 
-class ConcThread extends Thread {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    public void run() {
 
-        //try
-        //{
-            //String s = reader.readLine();
-            //String[] argsCopy = reader.readLine().split(" ");
-            String [] str = {"-c", "Миронов", "м", "15/04/1990", "Миронова", "ж", "15/04/1990"};
-            //Solution.main(argsCopy);
-            Solution.main(str);
-        //}
-        //catch (IOException e) {}
+/*
+
+public class Solution {
+    public static List<Person> allPeople = new ArrayList<Person>();
+    static {
+        allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
+        allPeople.add(Person.createMale("Петров Петр", new Date()));  //сегодня родился    id=1
 
     }
+
+    public static void main(String[] args)
+    {
+        //start here - начни тут
+
+    }
+
+
 }
+*/
