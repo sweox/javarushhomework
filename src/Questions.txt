@@ -102,6 +102,7 @@ name можно не использовать.
 ---------------------------
     level17.lesson10.bonus03
 Хорошая большая задача про ресторан
+http://www.seostella.com/ru/article/2012/08/09/kollekcii-collections-v-java-queue.html
 ===================================================
 
 
