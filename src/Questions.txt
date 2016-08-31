@@ -131,6 +131,12 @@ for (final Iterator<Map.Entry<Integer, Integer>> i = map.entrySet().iterator(); 
 for (final Map.Entry<Integer, Integer> entry : map.entrySet()) {
   System.out.println("" + entry.getKey() + "=" + entry.getValue());
 }
+------------------------
+    level18.lesson10.bonus02
+OutputStreamWriter позволяет указать кодировку, но не получается именно ДОПИСАТЬ в файл.
+FileWriter позволяет ДОПИСАТЬ в файл, но кодировку указать не позволяет
+OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("x.txt", true), "UTF-8");
+http://www.skipy.ru/technics/encodings.html
 =============================================
     level19.lesson03.task05
 Изучить regex
