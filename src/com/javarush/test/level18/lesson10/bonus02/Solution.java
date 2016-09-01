@@ -91,7 +91,6 @@ public class Solution {
             }
             r.close();
 
-
             w.write("\n" + addSpace(map.lastEntry().getKey() + 1, 8) +
                     String.valueOf(productName) +
                     String.valueOf(price) + String.valueOf(quantity));
