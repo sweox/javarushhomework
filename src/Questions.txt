@@ -139,6 +139,9 @@ OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream("x.txt",
 http://www.skipy.ru/technics/encodings.html
 
 http://info.javarush.ru/JavaRush_tasks_discussion/2013/09/25/level18-lesson10-bonus02.html
+----------------------
+    level18.lesson10.bonus03
+Непонятно почему не проходил мой вариант!!!!!!!!!!!!!!!!!!1
 =============================================
     level19.lesson03.task05
 Изучить regex
