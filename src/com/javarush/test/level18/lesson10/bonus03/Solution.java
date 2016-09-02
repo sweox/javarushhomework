@@ -38,19 +38,18 @@ public class Solution {
         try {
             fileName = reader.readLine();
 
-
-        String id = args[1];
-        String productName = args[2];
-        String price = args[3];
-        String quantity = args[4];
         switch(args[0]) {
-            case "-u" : update( id,  productName,  price,  quantity,  fileName); break;
-            case "-d" : logDelete(id, " ", " ", " ", fileName); break;
+            case "-u" : update( args, fileName); break;
+            case "-d" : logDelete(args, fileName); break;
         }
         }
         catch (IOException e) {}
     }
-    static void update (String id, String productName, String price, String quantity, String fileName) throws  IOException{
+    static void update (String[] args, String fileName) throws  IOException{
+        String id = args[1];
+        String productName = args[2];
+        String price = args[3];
+        String quantity = args[4];
         if (checkReady(fileName)) {
             readFileForUpdate(id, productName, price, quantity, fileName);
             fileWrite(list, fileName);
@@ -58,9 +57,10 @@ public class Solution {
 
     }
 
-    static void logDelete(String id, String productName, String price, String quantity, String fileName) throws  IOException {
+    static void logDelete(String[] args, String fileName) throws  IOException {
+        String id = args[1];
         if (checkReady(fileName)) {
-            readFileForDelete(id, productName, price, quantity, fileName);
+            readFileForDelete(id, fileName);
             fileWrite(list, fileName);
         }
     }
@@ -69,22 +69,17 @@ public class Solution {
 
         String line = "";
         BufferedReader read = new BufferedReader(new FileReader(fileName));
-        while (read.ready())
-        {
+        while (read.ready()) {
             line = read.readLine();
-            if (!line.isEmpty())
-            {
-                if (checkId(id) == checkId(line.substring(0, 8)))
-                {
+            if (!line.isEmpty()) {
+                if (checkId(id) == checkId(line.substring(0, 8))) {
                     list.add(parseStr(String.valueOf(id), 8) + parseStr(productName, 30) + parseStr(price, 8) + parseStr(quantity, 4));
                 }
-                else
-                {
+                else {
                     list.add(line);
                 }
             }
-            else
-            {
+            else {
                 list.add(line);
             }
         }
@@ -93,39 +88,28 @@ public class Solution {
 
     }
 
-    static void readFileForDelete(String id, String productName, String price, String quantity, String fileName) throws IOException {
+    static void readFileForDelete(String id, String fileName) throws IOException {
 
         String line = "";
         BufferedReader read = new BufferedReader(new FileReader(fileName));
-        while (read.ready())
-        {
+        while (read.ready()) {
             line = read.readLine();
-            if (!line.isEmpty())
-            {
-                if (checkId(id) == checkId(line.substring(0, 8)))
-                {
-                    list.add(parseStr(String.valueOf(id), 8) + parseStr(productName, 30) + parseStr(price, 8) + parseStr(quantity, 4));
-                }
-                else
-                {
-                    list.add(line);
-                }
-            }
-            else
-            {
+            if (line.isEmpty()) {
                 list.add(line);
             }
+            else if (checkId(id) != checkId(line.substring(0, 8))) {
+                list.add(line);
+            }
+
         }
         read.close();
-
-
     }
 
     static void fileWrite(ArrayList<String> list, String fileName) throws IOException {
         BufferedWriter wr = new BufferedWriter(new FileWriter(fileName));
         for(String s : list) {
-            wr.newLine();
             wr.write(s);
+            wr.newLine();
         }
         wr.close();
     }
