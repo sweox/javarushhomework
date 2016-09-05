@@ -58,46 +58,46 @@ public class Solution {
             readFile(fileName1, list1);
             readFile(fileName2, list2);
 
-//            while(!list2.isEmpty()) {
-//
-//            }
-            //int i = 0;
-            //int j = 0;
-//            for (int i = 0, j = 0; i < list1.size() && j < list2.size(); ) {
-//                if (list1.get(i).equals(list2.get(j))) {
-//                    lines.add(new LineItem(Type.SAME, list1.get(i)));
-//                    i++;
-//                    j++;
-//                }
-//            }
+            int i = 0;
+            int j = 0;
+            while (i < list1.size() && j < list2.size()) {
 
-            primo(list1, list2, 0, 0, 0);
+                if (list1.get(i).equals(list2.get(j))) {
+                    lines.add(new LineItem(Type.SAME, list1.get(i)));
+                    i++;
+                    j++;
+                }
 
+                else if (list1.size() > (i + 1) && list1.get(i + 1).equals(list2.get(j))) {
+                    lines.add(new LineItem(Type.REMOVED, list1.get(i)));
+                    i++;
+                }
+                else if (list2.size() > (j + 1) && list2.get(j + 1).equals(list1.get(i))) {
+                    lines.add(new LineItem(Type.ADDED, list2.get(j)));
+                    j++;
+                }
+
+
+            }
+
+            if (i < list1.size()) {
+                lines.add(new LineItem(Type.REMOVED, list1.get(i)));
+            }
+            if (j < list2.size()) {
+                lines.add(new LineItem(Type.ADDED, list2.get(j)));
+            }
+
+
+        }
+        catch (Exception e) {}
+        //finally
+        //{
             for (LineItem l : lines) {
                 System.out.println(l.type + " " + l.line);
             }
-        }
-        catch (IOException e) {}
+        //}
     }
 
-    static void primo(ArrayList<String> list1, ArrayList<String> list2,int start, int offs1, int offs2) {
-        if ((start + offs2) < list2.size() && (start + offs1) < list1.size()) {
-            if (list1.get(start + offs1).equals(list2.get(start + offs2))) {
-                lines.add(new LineItem(Type.SAME, list1.get(start + offs1)));
-                primo(list1, list2, ++start, offs1, offs2);
-            }
-            else if (list1.get(start + offs1).equals(list2.get(start + 1 + offs2))) {
-                lines.add(new LineItem(Type.ADDED, list2.get(start + offs2)));
-                primo(list1, list2, ++start, --offs1, offs2);
-            }
-            else if (!list1.get(start + offs1).equals(list2.get(start + 1 + offs2))) {
-                lines.add(new LineItem(Type.REMOVED, list1.get(start + offs1)));
-                primo(list1, list2, ++start, offs1, --offs2);
-            }
-
-        }
-        else lines.add(new LineItem(Type.REMOVED, list1.get(list1.size() - 1)));
-    }
 
     static void readFile(String fileName, ArrayList<String> arrayList)  throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
