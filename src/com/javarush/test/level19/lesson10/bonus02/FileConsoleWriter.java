@@ -32,20 +32,30 @@ public class FileConsoleWriter extends FileWriter {
         super(fd);
     }
 
+
+
     public void write(int c) throws IOException {
-        char[] var2 = new char[]{(char)c};
-        this.write((char[])var2, 0, 1);
+        System.out.print((char)c);
+        super.write(c);
     }
     public void write(char cbuf[]) throws IOException {
+        //System.out.println(cbuf);
         write(cbuf, 0, cbuf.length);
     }
 
+    public void write(char cbuf[], int off, int len) throws IOException {
+        System.out.print(String.valueOf(cbuf, off, len));
+        super.write(cbuf, off, len);
+    }
+
     public void write(String str) throws IOException {
+        //System.out.println(str);
         write(str, 0, str.length());
     }
 
     public void write(String str, int off, int len) throws IOException {
-        write(str, off, len);
+        System.out.print(str.substring(off, (off + len)));
+        super.write(str, off, len);
     }
 
 
@@ -53,7 +63,7 @@ public class FileConsoleWriter extends FileWriter {
 
     public static void main(String[] args) throws IOException
     {
-        FileConsoleWriter fileConsoleWriter = new FileConsoleWriter("test");
+        FileConsoleWriter fileConsoleWriter = new FileConsoleWriter("c:/111.txt");
         fileConsoleWriter.write("Проверка String:");
         fileConsoleWriter.write(1234);
         char[] buff = "Проверка char buff:".toCharArray();
@@ -64,3 +74,11 @@ public class FileConsoleWriter extends FileWriter {
         fileConsoleWriter.close();
     }
 }
+
+
+/*
+
+public class FileConsoleWriter {
+
+}
+*/
