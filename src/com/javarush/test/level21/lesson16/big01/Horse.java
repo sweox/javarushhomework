@@ -12,6 +12,9 @@ public class Horse {
         this.distance = distance;
     }
 
+    public void move() {}
+    public void print() {}
+
     public void setName(String name) {
         this.name = name;
     }
