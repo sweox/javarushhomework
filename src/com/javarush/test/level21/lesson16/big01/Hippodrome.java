@@ -18,10 +18,32 @@ public class Hippodrome {
 
         game.run();
 
+        game.printWinner();
+
     }
+
     public ArrayList<Horse> getHorses() {
         return horses;
     }
+
+    public Horse getWinner() {
+        Horse win = null;
+        for(Horse h : horses) {
+            if (win == null) {
+                win = h;
+            }
+            else if(h.getDistance() > win.getDistance()) {
+                win = h;
+            }
+        }
+        return win;
+
+    }
+
+    public void printWinner() {
+        System.out.println("Winner is " + getWinner().getName() + "!");
+    }
+
     public void run() {
         for (int i = 0; i < 100; i++) {
             move();
@@ -32,11 +54,13 @@ public class Hippodrome {
             catch (InterruptedException e) {}
         }
     }
+
     public void move() {
         for (Horse h : horses) {
             h.move();
         }
     }
+
     public void print() {
         for (int i = 0; i < horses.size(); i++) {
             horses.get(i).print();
