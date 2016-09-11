@@ -24,6 +24,7 @@ public class Solution {
 
     public static void main(String[] args) {
         try {
+//            Pair pair;
             ArrayList<String> list = new ArrayList<>();
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String fileName = reader.readLine();
@@ -34,9 +35,22 @@ public class Solution {
                 list.addAll(Arrays.asList(fileReader.readLine().split(" ")));
             }
             System.out.println(list);
-            for (String s : list) {
-
+            for (int i = 0; i < list.size(); i++) {
+                for (int j = 0; j < list.size(); j++) {
+                    if (list.get(i) == null || list.get(j) == null) {
+                        continue;
+                    }
+                    if (list.get(i).equals(new StringBuilder(list.get(j)).reverse().toString()) && i != j) {
+                        Pair pair = new Pair();
+                        pair.first = list.get(i);
+                        pair.second = list.get(j);
+                        result.add(pair);
+                        list.set(i, null);
+                        list.set(j, null);
+                    }
+                }
             }
+            System.out.println(result);
         }
         catch (IOException e) {}
     }
