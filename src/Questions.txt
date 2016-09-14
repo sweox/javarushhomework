@@ -331,6 +331,13 @@ http://stackoverflow.com/questions/18683996/object-finalize-method-ignoring-exce
 http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#jls-8.3
 http://www.skipy.ru/technics/encodings.html
 -------------------------------------
+============================================
+    level22.lesson13.task02
+Разобраться с порядком кодировки
+---------------------------------------------
+
+
+
     level17.lesson10.bonus01;
 Почему-то так не работает:
          boolean f = strArr[2].equals("м") ? allPeople.add(Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3]))) :
