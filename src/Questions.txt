@@ -335,6 +335,11 @@ http://www.skipy.ru/technics/encodings.html
     level22.lesson13.task02
 Разобраться с порядком кодировки
 ---------------------------------------------
+    level22.lesson13.task03
+Разобраться с RegEx
+RegexBuddy 4.1.3
+http://www.friendlyfunction.com/ru/category/java/regular-expressions/
+http://regexr.com/
 
 
 
