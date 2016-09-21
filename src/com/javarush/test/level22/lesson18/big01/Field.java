@@ -23,4 +23,11 @@ public class Field {
         this.height = height;
         matrix = new int[height][width];
     }
+
+    public void print() {}
+    public void removeFullLines() {}
+    public Integer getValue(int x, int y) {
+        return (Integer)matrix[x][y];
+    }
+    void setValue(int x, int y, int value) {}
 }
