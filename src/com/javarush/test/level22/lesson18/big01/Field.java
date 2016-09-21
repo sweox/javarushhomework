@@ -29,5 +29,7 @@ public class Field {
     public Integer getValue(int x, int y) {
         return (Integer)matrix[x][y];
     }
-    void setValue(int x, int y, int value) {}
+    void setValue(int x, int y, int value) {
+        matrix[x][y] = value;
+    }
 }
