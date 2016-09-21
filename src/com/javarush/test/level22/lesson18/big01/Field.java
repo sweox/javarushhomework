@@ -24,12 +24,19 @@ public class Field {
         matrix = new int[height][width];
     }
 
-    public void print() {}
+    public void print() {
+        for (int i = 0; i < getMatrix().length; i++) {
+            for (int j = 0; j < getMatrix()[i].length; j++) {
+                System.out.print(getMatrix()[i][j] == 0 ? "." : "X");
+            }
+            System.out.println();
+        }
+    }
     public void removeFullLines() {}
     public Integer getValue(int x, int y) {
         return (Integer)matrix[x][y];
     }
-    void setValue(int x, int y, int value) {
+    public void setValue(int x, int y, int value) {
         matrix[x][y] = value;
     }
 }
