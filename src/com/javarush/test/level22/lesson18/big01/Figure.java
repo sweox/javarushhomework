@@ -24,10 +24,18 @@ public class Figure {
         this.matrix = matrix;
     }
 
-    public void left() {}
-    public void right() {}
-    public void down() {}
-    public void up() {}
+    public void left() {
+        x--;
+    }
+    public void right() {
+        x++;
+    }
+    public void down() {
+        y++;
+    }
+    public void up() {
+        y--;
+    }
     public void downMaximum() {}
     public void rotate() {}
     public boolean isCurrentPositionAvailable() {return true;}
