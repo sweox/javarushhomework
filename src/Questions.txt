@@ -351,8 +351,9 @@ http://java-course.ru/begin/multi-array/ Многомерные массивы
 http://prologistic.com.ua/dvumerny-e-massivy-v-java.html  Двумерные массивы в Java
 ================================================
     level23.lesson04.task01
-
 http://www.beingjavaguys.com/2013/10/inner-class-example-in-java.html
+----------------------------------------------------
+
 
 
     level17.lesson10.bonus01;
