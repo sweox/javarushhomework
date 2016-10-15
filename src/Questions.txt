@@ -364,7 +364,7 @@ http://lwn.net/Articles/255364/     Memory part 5: What programmers can do
 Про final в локальных анонимных классах (анонимные классы в методах)
 http://javatalks.ru/topics/40223
 http://javastudy.ru/interview/java-oop2/
-
+Внутренний класс не может изменить локальную переменную метода
 
 
 
