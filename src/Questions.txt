@@ -378,6 +378,9 @@ https://habrahabr.ru/post/133237/   Малоизвестные особенно�
 http://info.javarush.ru/javarush_articles/2015/12/04/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%B2-Java-JDK-1-5-.html
 Конструкторы классов. Java JDK 1.5.
 --------------------------------------------
+    level24.lesson04.home01
+Полезная задача про рефакторинг
+----------------------------------------------
     level24.lesson09.task01
 http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/06/level24-lesson09-task01.html
 
