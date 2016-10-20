@@ -360,6 +360,14 @@ http://info.javarush.ru/zor07/2016/06/19/%D0%A3%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1
 http://lwn.net/Articles/250967/     What every programmer should know about memory, Part 1
 http://lwn.net/Articles/255364/     Memory part 5: What programmers can do
 ------------------------------------------------------
+    level23.lesson08.home01
+    //reflection
+    //you have to know that it is possible to create new instance of T (generic type) class by using its default constructor
+    private T getNewInstanceOfGenericType() throws InstantiationException, IllegalAccessException {
+        return (T) ((Class) ((ParameterizedType) this.getClass().
+                getGenericSuperclass()).getActualTypeArguments()[0]).newInstance();
+    }
+
 =============================================
     level24
 Про final в локальных анонимных классах (анонимные классы в методах)
