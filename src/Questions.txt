@@ -383,6 +383,23 @@ http://info.javarush.ru/javarush_articles/2015/12/04/%D0%9A%D0%BE%D0%BD%D1%81%D1
 ----------------------------------------------
     level24.lesson06.home01
 Тоже хорошая задача
+-------------------------------------------------
+    test.level24.lesson06.home02
+
+http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/26/level24-lesson06-home02-.html
+http://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string-in-java/1316608#1316608
+
+String scream="";
+for (int j = 0; j < i; j++) scream+="а";
+return i<=0 ? getName()+" спит." : getName()+" лает г"+scream+"в! "+formatter.format(new Date());
+
+new String(new char[i]).replace("\0", "а")
+
+// create a string made up of  n  copies of  s
+repeated = String.format(String.format("%%%ds", n), " ").replace(" ",s);
+
+//You can make the solution less ugly and easier to understand:
+String.format("%0"+n+"d", 0).replace("0", s)
 ------------------------------------------
     level24.lesson09.task01
 http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/06/level24-lesson09-task01.html
