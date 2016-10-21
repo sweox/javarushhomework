@@ -386,6 +386,8 @@ http://info.javarush.ru/javarush_articles/2015/12/04/%D0%9A%D0%BE%D0%BD%D1%81%D1
 -------------------------------------------------
     test.level24.lesson06.home02
 
+http://tutorials.jenkov.com/java-internationalization/simpledateformat.html
+
 http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/26/level24-lesson06-home02-.html
 http://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string-in-java/1316608#1316608
 
