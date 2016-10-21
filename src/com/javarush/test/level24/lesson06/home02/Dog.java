@@ -60,6 +60,9 @@ public class Dog implements Pet {
                     for(int j = 0; j < i; j++) {
                         sb.append("а");
                     }
+                    System.out.println(getName());
+//                    System.out.println(String.format(String.format("%%%ds", i), " ").replace(" ",getName()));
+//                    System.out.println(String.format("%0"+i+"d", 0).replace("0", getName()) + i);
                     return sb.append("в! ").append(formatter.format(new Date())).toString();
                 }
             }
