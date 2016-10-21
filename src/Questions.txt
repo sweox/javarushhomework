@@ -381,6 +381,9 @@ http://info.javarush.ru/javarush_articles/2015/12/04/%D0%9A%D0%BE%D0%BD%D1%81%D1
     level24.lesson04.home01
 Полезная задача про рефакторинг
 ----------------------------------------------
+    level24.lesson06.home01
+Тоже хорошая задача
+------------------------------------------
     level24.lesson09.task01
 http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/06/level24-lesson09-task01.html
 
