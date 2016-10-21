@@ -8,7 +8,7 @@ public class Util {
     public static void printDialog(List<Sayable> pets) {
         for (int i = 0; i < pets.size(); i++) {
             System.out.println(pets.get(i).say());
-            System.out.println(pets.get(i).getClass().getName());
+//            System.out.println(pets.get(i).getClass().getName());
         }
     }
 
