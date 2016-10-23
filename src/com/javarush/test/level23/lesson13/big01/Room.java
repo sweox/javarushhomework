@@ -39,13 +39,8 @@ public class Room {
         return mouse;
     }
 
-    public static Room game;
-    public static void main(String[] args) {
-        Snake snake = new Snake(5, 5);
-        game = new Room(10, 10, snake);
-        game.getSnake().setDirection(SnakeDirection.DOWN);
-    }
     public void run() {}
+    public void sleep() {}
     public void print() {}
     public void createMouse() {
         int x = (int) (Math.random() * width);
@@ -55,4 +50,14 @@ public class Room {
     public void eatMouse() {
         createMouse();
     }
+
+    public static Room game;
+    public static void main(String[] args) {
+        Snake snake = new Snake(5, 5);
+        game = new Room(10, 10, snake);
+        game.getSnake().setDirection(SnakeDirection.DOWN);
+        game.createMouse();
+        game.run();
+    }
+
 }
