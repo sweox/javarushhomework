@@ -39,7 +39,12 @@ public class Room {
         return mouse;
     }
 
+    public static Room game;
     public static void main(String[] args) {
-
+        Snake snake = new Snake(5, 5);
+        game = new Room(10, 10, snake);
+        game.getSnake().setDirection(SnakeDirection.DOWN);
     }
+    public void run() {}
+    public void print() {}
 }
