@@ -9,21 +9,17 @@ public class Snake {
     private ArrayList<SnakeSection> sections;
     private boolean isAlive;
     private SnakeDirection direction;
-    private int x;
-    private int y;
 
     public Snake(int x, int y) {
-        this.x = x;
-        this.y = y;
         sections = new ArrayList<>();
         sections.add(new SnakeSection(x, y));
         isAlive = true;
     }
     public int getX() {
-        return x;
+        return sections.get(0).getX();
     }
     public int getY() {
-        return y;
+        return sections.get(0).getY();
     }
     public void move() {}
 
