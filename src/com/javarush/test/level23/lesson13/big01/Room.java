@@ -2,6 +2,7 @@ package com.javarush.test.level23.lesson13.big01;
 
 
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 /**
  * Основной класс программы.
@@ -112,6 +113,28 @@ public class Room
         //Рисуем все кусочки змеи
         //Рисуем мышь
         //Выводим все это на экран
+        int [][] matrix = new int[height][width];
+        ArrayList<SnakeSection> tmpS = getSnake().getSections();
+        for(int i = 0; i < tmpS.size(); i++) {
+            if(i == 0) {
+               matrix[tmpS.get(i).getY()][tmpS.get(i).getX()] = 2;
+            }
+            else
+                matrix[tmpS.get(i).getY()][tmpS.get(i).getX()] = 1;
+        }
+        matrix[getMouse().getY()][getMouse().getX()] = 3;
+
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[i].length; j++) {
+                if(matrix[i][j] == 1)
+                    System.out.print("x");
+                if(matrix[i][j] == 2)
+                    System.out.print("X");
+                if(matrix[i][j] == 0)
+                    System.out.print(".");
+            }
+            System.out.println();
+        }
     }
 
     /**
