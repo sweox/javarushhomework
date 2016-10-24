@@ -81,11 +81,18 @@ public class Snake
         //Проверяем - не пересекает ли змея  саму себя
         //Проверяем - не съела ли змея мышь.
         //Двигаем змею.
-        SnakeSection head =
-                new SnakeSection(getX() + dx, getY() + dy);
+        SnakeSection head = new SnakeSection(getX() + dx, getY() + dy);
         checkBorders(head);
         checkBody(head);
 
+        if(head.getX() == Room.game.getMouse().getX() || head.getY() == Room.game.getMouse().getY()) {
+            Room.game.eatMouse();
+            sections.add(0, head);
+        }
+        else {
+            sections.add(0, head);
+            sections.remove(sections.size() - 1);
+        }
 
     }
 
@@ -94,6 +101,11 @@ public class Snake
      */
     private void checkBorders(SnakeSection head)
     {
+        if(head.getX() == Room.game.getWidth() || head.getY() == Room.game.getHeight()
+                || head.getX() < 0 || head.getY() < 0)
+        {
+            isAlive = false;
+        }
     }
 
     /**
