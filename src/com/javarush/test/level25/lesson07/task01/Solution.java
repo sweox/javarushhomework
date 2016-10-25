@@ -24,6 +24,7 @@ public class Solution extends Thread {
     public void interrupt() {
         //implement logic here
         try {
+//            in.close();
             socket.close();
         }
         catch(IOException ignore) {}
