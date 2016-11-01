@@ -7,6 +7,7 @@ package com.javarush.test.level25.lesson09.task01;
 3. Если это Throwable, то вывести в консоль "ХЗ"
 Реализуйте эту логику.
 */
+
 public class Solution extends Thread {
     public Solution() {
         this.setUncaughtExceptionHandler(new UncaughtExceptionHandler() {
@@ -26,3 +27,12 @@ public class Solution extends Thread {
     }
 
 }
+
+/*
+
+public class Solution extends Thread {
+    public Solution() {
+    }
+
+}
+*/
