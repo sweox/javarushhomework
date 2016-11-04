@@ -416,7 +416,7 @@ https://habrahabr.ru/post/164487/
 http://www.journaldev.com/1072/java-daemon-thread-example
 -------------------------------------------
     level26.lesson02.task01
-Задача про медиану
+Задача про медиану (интересная)
 https://edunow.su/site/content/algorithms/poisk_mediany
 http://www.pm298.ru/mediana.php
 
