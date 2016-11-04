@@ -414,7 +414,10 @@ http://programmersstack.blogspot.com.by/2008/01/java-thread-states-new-runnable-
 http://www.uml-diagrams.org/examples/java-6-thread-state-machine-diagram-example.html
 https://habrahabr.ru/post/164487/
 http://www.journaldev.com/1072/java-daemon-thread-example
-
+-------------------------------------------
+    level26.lesson02.task01
+Задача про медиану
+https://edunow.su/site/content/algorithms/poisk_mediany
 
 
 
