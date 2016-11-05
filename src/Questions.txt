@@ -432,7 +432,8 @@ http://www.pm298.ru/mediana.php
 -------------------
 Почитать про многопоточность
 https://habrahabr.ru/company/luxoft/blog/157273/
-
+http://howtodoinjava.com/core-java/multi-threading/thread-synchronization-object-level-locking-and-class-level-locking/
+http://www.skipy.ru/technics/synchronization.html#monitors
 
 
 
