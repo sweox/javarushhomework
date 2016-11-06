@@ -455,6 +455,7 @@ https://habrahabr.ru/post/128017/#putForNullKey
 
 
 
+
     level17.lesson10.bonus01;
 Почему-то так не работает:
          boolean f = strArr[2].equals("м") ? allPeople.add(Person.createMale(strArr[1], new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH).parse(strArr[3]))) :
