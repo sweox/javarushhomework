@@ -19,6 +19,11 @@ public class Solution implements Thread.UncaughtExceptionHandler {
     public void uncaughtException(Thread t, Throwable e) {
         t.interrupt();
 
+//        if (e.getCause() != null){
+//            uncaughtException(t, e.getCause());
+//        }
+//        System.out.println(e.toString());
+
         ArrayList<Throwable> list = new ArrayList<>();
         Throwable x = e;
         while (x != null) {
