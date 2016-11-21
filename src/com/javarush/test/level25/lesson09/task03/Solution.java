@@ -31,6 +31,11 @@ public class Solution implements Thread.UncaughtExceptionHandler {
         }
     }
 
+    public static void main(String[] args) {
+        Throwable e =  new Exception("ABC", new RuntimeException("DEF", new IllegalAccessException("GHI")));
+        new Solution().uncaughtException(Thread.currentThread(), e);
+    }
+
 //    public static void main(String[] args) {
 //
 //        Thread thread = new Thread() {
