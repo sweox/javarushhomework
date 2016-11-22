@@ -456,6 +456,9 @@ https://habrahabr.ru/post/128017/#putForNullKey
 ---------------------
     level26.lesson10.task01
 http://pastebin.com/defTeiej
+============================================================
+    level27.lesson02.task02
+Разобраться с вложенными циклами
 
 
 
