@@ -28,7 +28,7 @@ public class Solution implements Thread.UncaughtExceptionHandler {
         Throwable x = e;
         while (x != null) {
             list.add(0, x);
-            x = x.getCause();
+            x = x.getCause();  //Throwable getCause() - возвращает исключение, лежащее под текущим исключение или null
         }
         Iterator it = list.iterator();
         while(it.hasNext()) {
