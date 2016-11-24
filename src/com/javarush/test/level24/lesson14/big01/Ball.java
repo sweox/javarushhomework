@@ -8,6 +8,6 @@ public class Ball extends BaseObject {
         super(x, y, radius);
     }
 
-    public void draw() { }
+    public void draw(Canvas canvas) { }
     public void move() { }
 }

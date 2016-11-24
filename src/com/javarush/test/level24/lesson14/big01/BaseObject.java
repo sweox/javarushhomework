@@ -1,45 +1,83 @@
 package com.javarush.test.level24.lesson14.big01;
 
 /**
- * Created by BELSHINA on 24.11.2016.
+ * Базовый класс для всех объектов игры.
  */
-public abstract class BaseObject {
-    private double x;
-    private double y;
-    private double radius;
+public abstract class BaseObject
+{
+    //координаты
+    protected double x;
+    protected double y;
+    //радиус объекта
+    protected double radius;
 
-    public void setX(double x) {
+    protected BaseObject(double x, double y, double radius)
+    {
         this.x = x;
-    }
-    public double getX() {
-        return x;
-    }
-    public void setY(double y) {
         this.y = y;
-    }
-    public double getY() {
-        return y;
-    }
-    public void setRadius(double radius) {
         this.radius = radius;
     }
-    public double getRadius() {
+
+    public double getX()
+    {
+        return x;
+    }
+
+    public void setX(double x)
+    {
+        this.x = x;
+    }
+
+    public double getY()
+    {
+        return y;
+    }
+
+    public void setY(double y)
+    {
+        this.y = y;
+    }
+
+    public double getRadius()
+    {
         return radius;
     }
 
-    public BaseObject(double x, double y, double radius) {
-        this.x = x;
-        this.y = y;
+    public void setRadius(double radius)
+    {
         this.radius = radius;
     }
 
-    public abstract void draw();
+    /**
+     * Метод рисует свой объект на "канвасе".
+     */
+    public abstract void draw(Canvas canvas);
+
+    /**
+     * Двигаем себя на один ход.
+     */
     public abstract void move();
 
-    public boolean isIntersec(BaseObject o) {
-        double dX = this.getX() - o.getX();
-        double dY = this.getY() - o.getY();
-        return (Math.sqrt(dX * dX) + (dY * dY)) <
-                Math.max(this.getRadius(), o.getRadius());
+    /**
+     * Проверяем - не выходит ли (x,y) за границы.
+     */
+    public void checkBorders(double minx, double maxx, double miny, double maxy)
+    {
+        if (x < minx) x = minx;
+        if (x > maxx) x = maxx;
+        if (y < miny) y = miny;
+        if (y > maxy) y = maxy;
+    }
+
+    /**
+     * Проверяем - пересекаются ли переданный(o) и наш(this) объекты.
+     */
+    public boolean isIntersec(BaseObject o)
+    {
+        double dx = x - o.x;
+        double dy = y - o.y;
+        double destination = Math.sqrt(dx * dx + dy * dy);
+        double destination2 = Math.max(radius, o.radius);
+        return destination <= destination2;
     }
 }
