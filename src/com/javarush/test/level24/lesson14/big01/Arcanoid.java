@@ -13,6 +13,8 @@ public class Arcanoid {
     private Stand stand;
     private ArrayList<Brick> bricks;
 
+    public static Arcanoid game;
+
     public Arcanoid(int width, int height) {
         this.width = width;
         this.height = height;
@@ -47,6 +49,13 @@ public class Arcanoid {
     }
     public ArrayList<Brick> getBricks() {
         return bricks;
+    }
+
+    public void run() {
+
+    }
+    public void move() {
+
     }
 
     public static void main(String[] args) {
