@@ -24,6 +24,15 @@ public class Stand extends BaseObject {
      }
 
      public void draw(Canvas canvas) {}
-     public void move() {}
+     public void move() {
+         x = x + direction * speed;
+     }
+
+     public void moveLeft() {
+         this.direction = -1;
+     }
+     public void moveRight() {
+         this.direction = 1;
+     }
 
 }
