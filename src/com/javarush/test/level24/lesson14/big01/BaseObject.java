@@ -3,7 +3,7 @@ package com.javarush.test.level24.lesson14.big01;
 /**
  * Created by BELSHINA on 24.11.2016.
  */
-public class BaseObject {
+public abstract class BaseObject {
     private double x;
     private double y;
     private double radius;
@@ -31,5 +31,15 @@ public class BaseObject {
         this.x = x;
         this.y = y;
         this.radius = radius;
+    }
+
+    public abstract void draw();
+    public abstract void move();
+
+    public boolean isIntersec(BaseObject o) {
+        double dX = this.getX() - o.getX();
+        double dY = this.getY() - o.getY();
+        return (Math.sqrt(dX * dX) + (dY * dY)) <
+                Math.max(this.getRadius(), o.getRadius());
     }
 }
