@@ -13,7 +13,7 @@ public class TransferObject {
         }
         System.out.println("Got: " + value);
         isValuePresent = false;
-        notifyAll();
+        notify();
 
         return value;
     }
@@ -28,7 +28,7 @@ public class TransferObject {
         this.value = value;
         System.out.println("Put: " + value);
         isValuePresent = true;
-        notifyAll();
+        notify();
     }
 }
 

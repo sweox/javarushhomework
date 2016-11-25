@@ -459,6 +459,13 @@ http://pastebin.com/defTeiej
 ============================================================
     level27.lesson02.task02
 Разобраться с вложенными циклами
+-----------------------------------
+    test.level27.lesson09.task01
+Почитать статью на  https://habrahabr.ru/post/277669/  Справочник по синхронизаторам java.util.concurrent.*
+-------------------------------------
+    level27.lesson09.home01
+Хорошая задача на понимание wait/notify/notifyAll
+http://www.java-samples.com/showtutorial.php?tutorialid=306   wait(), notify() and notifyAll() in Java - A tutorial
 
 
 
