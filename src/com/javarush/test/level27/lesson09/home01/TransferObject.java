@@ -13,17 +13,22 @@ public class TransferObject {
         }
         System.out.println("Got: " + value);
         isValuePresent = false;
+        notifyAll();
 
         return value;
     }
 
     public synchronized void put(int value) {
-        if(!isValuePresent) {
-            this.value = value;
-            System.out.println("Put: " + value);
-            isValuePresent = true;
-            notifyAll();
+        if(isValuePresent) {
+            try {
+                this.wait();
+            }
+            catch (InterruptedException e) {}
         }
+        this.value = value;
+        System.out.println("Put: " + value);
+        isValuePresent = true;
+        notifyAll();
     }
 }
 
