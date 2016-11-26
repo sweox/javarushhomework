@@ -483,6 +483,16 @@ http://www.concretepage.com/java/jdk7/threadlocalrandom-java-example
     level28.lesson06.task01
 Как избежать ConcurrentModificationException при пользовании коллекциями
 https://dev64.wordpress.com/2013/03/11/how-to-deal-with-concurrent-modification-exception/
+-----------------------------
+    level28.lesson08.task01
+ExecutorService
+http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
+Пять вещей, которые вы не знали о ... пакете java.util.concurrent. Часть 2
+http://www.ibm.com/developerworks/ru/library/j-5things5/index.html
+Многопоточность в Java: ExecutorService
+https://habrahabr.ru/post/116363/
+
+
 
 
 
@@ -509,6 +519,9 @@ http://info.javarush.ru/translation/2014/10/09/%D0%9E%D1%81%D0%BE%D0%B1%D0%B5%D0
 
 Теория и практика Java: Введение в неблокирующие алгоритмы
 http://www.ibm.com/developerworks/ru/library/j-jtp04186/index.html
+
+Java - doc на русском
+http://spec-zone.ru/RU/Java/Docs/7/api/allclasses-noframe.html
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
