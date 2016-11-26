@@ -479,7 +479,10 @@ http://wilddiary.com/understanding_custom_threadfactory_in_java/#threadNaming
 -----------------------------------
     level28.lesson04.task02
 http://www.concretepage.com/java/jdk7/threadlocalrandom-java-example
-
+--------------------------------------
+    level28.lesson06.task01
+Как избежать ConcurrentModificationException при пользовании коллекциями
+https://dev64.wordpress.com/2013/03/11/how-to-deal-with-concurrent-modification-exception/
 
 
 
