@@ -491,6 +491,10 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
 http://www.ibm.com/developerworks/ru/library/j-5things5/index.html
 Многопоточность в Java: ExecutorService
 https://habrahabr.ru/post/116363/
+=========================================
+    level29.lesson02.task01
+Naming conventions for java methods that return boolean(No question mark)
+http://stackoverflow.com/questions/3874350/naming-conventions-for-java-methods-that-return-booleanno-question-mark
 
 
 
