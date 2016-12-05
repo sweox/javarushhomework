@@ -499,6 +499,9 @@ http://stackoverflow.com/questions/3874350/naming-conventions-for-java-methods-t
     level29.lesson05.task02
 про особенности автобоксинга
 https://sohabr.net/habr/post/201334/
+----------------------------------
+    level29.lesson09.task01
+Представление чисел в двоичном коде с плавающей запятой   IEEE 754
 
 
 
