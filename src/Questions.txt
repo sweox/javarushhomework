@@ -502,6 +502,7 @@ https://sohabr.net/habr/post/201334/
 ----------------------------------
     level29.lesson09.task01
 Представление чисел в двоичном коде с плавающей запятой   IEEE 754
+http://digteh.ru/proc/float/
 
 
 
