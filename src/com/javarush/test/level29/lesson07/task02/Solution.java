@@ -17,7 +17,9 @@ public class Solution {
     }
 
     public static Integer getValue(boolean first, boolean second) {
-        if(first) {
+        if (first) return 100;
+        else return second ? 200 : null;
+        /*if(first) {
             return 100;
         }
         else {
@@ -26,7 +28,7 @@ public class Solution {
             }
             else
                 return null;
-        }
+        }*/
     }
 }
 
