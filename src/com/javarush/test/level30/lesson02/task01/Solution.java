@@ -16,17 +16,22 @@ public class Solution {
 
     public static String convertToDecimalSystem(String s) {
 
-        if(s.startsWith("0x")) {
-            return String.valueOf(Integer.parseInt(s.substring(2, s.length()), 16));
-        }
-        if(s.startsWith("0b")) {
-            return String.valueOf(Integer.parseInt(s.substring(2, s.length()), 2));
-        }
-        if(s.startsWith("0")) {
-            return String.valueOf(Integer.parseInt(s.substring(1, s.length()), 8));
+        String tmp = "";
+        if(s.toCharArray()[0] == '0') {
+            if (s.toCharArray()[1] == 'x') {
+                tmp = String.valueOf(Integer.parseInt(s.substring(2, s.length()), 16));
+            }
+            else if (s.toCharArray()[1] == 'b') {
+                tmp = String.valueOf(Integer.parseInt(s.substring(2, s.length()), 2));
+            }
+            else
+                tmp = String.valueOf(Integer.parseInt(s, 8));
         }
         else
-            return s;
+            tmp =  String.valueOf(Integer.parseInt(s, 10));
+        return  tmp;
+
+
     }
 }
 
@@ -48,17 +53,16 @@ public class Solution {
 
 
 
-String tmp = "";
-if(s.toCharArray()[0] == '0') {
-        if (s.toCharArray()[1] == 'x') {
-        tmp = String.valueOf(Integer.parseInt(s.substring(2, s.length()), 16));
+if(s.startsWith("0x")) {
+            return String.valueOf(Integer.parseInt(s.substring(2, s.length()), 16));
         }
-        else if (s.toCharArray()[1] == 'b') {
-        tmp = String.valueOf(Integer.parseInt(s.substring(2, s.length()), 2));
+        if(s.startsWith("0b")) {
+            return String.valueOf(Integer.parseInt(s.substring(2, s.length()), 2));
         }
-        else
-        tmp = String.valueOf(Integer.parseInt(s, 8));
+        if(s.startsWith("0")) {
+            return String.valueOf(Integer.parseInt(s.substring(1, s.length()), 8));
         }
         else
-        tmp =  String.valueOf(Integer.parseInt(s, 10));
-        return  tmp;*/
+            return s;
+
+        */
