@@ -409,6 +409,9 @@ http://info.javarush.ru/JavaRush_tasks_discussion/2014/02/06/level24-lesson09-ta
     level24.lesson09.task02
 Интересная задача про ChoiceFormat, MessageFormat
 ==========================================
+    level25.lesson02.home01
+Хорошая задача на понимание enum
+----------------------------------------------
     level25.lesson05.home01
 Про многопоточность полезные ссылки
 http://www.w3resource.com/java-tutorial/java-threadclass-methods-and-threadstates.php

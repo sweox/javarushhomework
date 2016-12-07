@@ -2,6 +2,7 @@ package com.javarush.test.level25.lesson02.home01;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 public enum Column implements Columnable {
@@ -52,15 +53,19 @@ public enum Column implements Columnable {
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
         TreeMap<Integer, Column> map = new TreeMap<>();
-        for(int d: realOrder) {
-            if(d != -1) {
-                //result.add(Column.values()[d]);
-                map.put(d, Column.values()[d]);
+        for(int i = 0;  i < realOrder.length; i++) {
+            if(realOrder[i] != -1) {
+                map.put(realOrder[i], Column.values()[i]);
             }
         }
-        for(Integer c : map.keySet()) {
-            //result.add(c.);
+//        for(Map.Entry<Integer, Column> c : map.entrySet()) {
+//            result.add(c.getValue());
+//        }
+
+        for(int f : map.keySet()) {
+            result.add(map.get(f));
         }
+
 
         return result;
     }
@@ -81,6 +86,8 @@ public enum Column implements Columnable {
     }
 }
 
+
+
 /*
 
 public enum Column {
@@ -99,12 +106,12 @@ public enum Column {
 
     */
 /**
-     * Задает новый порядок отображения колонок, который хранится в массиве realOrder.
-     * realOrder[индекс в энуме] = порядок отображения; -1, если колонка не отображается.
-     *
-     * @param newOrder новая последовательность колонок, в которой они будут отображаться в таблице
-     * @throws IllegalArgumentException при дубликате колонки
-     *//*
+ * Задает новый порядок отображения колонок, который хранится в массиве realOrder.
+ * realOrder[индекс в энуме] = порядок отображения; -1, если колонка не отображается.
+ *
+ * @param newOrder новая последовательность колонок, в которой они будут отображаться в таблице
+ * @throws IllegalArgumentException при дубликате колонки
+ *//*
 
     public static void configureColumns(Column... newOrder) {
         realOrder = new int[values().length];
@@ -126,11 +133,11 @@ public enum Column {
 
     */
 /**
-     * Вычисляет и возвращает список отображаемых колонок в сконфигурированом порядке (см. метод configureColumns)
-     * Используется поле realOrder.
-     *
-     * @return список колонок
-     *//*
+ * Вычисляет и возвращает список отображаемых колонок в сконфигурированом порядке (см. метод configureColumns)
+ * Используется поле realOrder.
+ *
+ * @return список колонок
+ *//*
 
     public static List<Column> getVisibleColumns() {
         List<Column> result = new LinkedList<>();
@@ -139,3 +146,8 @@ public enum Column {
     }
 }
 */
+
+
+
+
+
