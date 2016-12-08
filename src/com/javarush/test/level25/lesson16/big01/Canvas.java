@@ -1,56 +1,82 @@
 package com.javarush.test.level25.lesson16.big01;
 
-/**
- * Created by BELSHINA on 08.12.2016.
- */
-public class Canvas {
+
+public class Canvas
+{
     private int width;
     private int height;
-    char[][] matrix;
+    private char[][] matrix;
 
-    public int getWidth() {
-        return width;
-    }
-    public int getHeight() {
-        return height;
-    }
-    public char[][] getMatrix() {
-        return matrix;
-    }
-
-    public Canvas(int width, int height) {
+    public Canvas(int width, int height)
+    {
         this.width = width;
         this.height = height;
-        matrix = new char[height][width];
+        this.matrix = new char[height + 2][width + 2];
     }
 
-    public void setPoint(double x, double y, char c) {
-        matrix[(int)Math.round(y)][(int)Math.round(x)] = c;
+    public void clear()
+    {
+        this.matrix = new char[height + 2][width + 2];
     }
-    public void drawMatrix(double x, double y, int[][] matrix, char c) {
-        for(int i = 0; i < matrix.length; i++) {
-            for(int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] != 0) {
+
+    public void drawMatrix(double x, double y, int[][] matrix, char c)
+    {
+        int height = matrix.length;
+        int width = matrix[0].length;
+
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                if (matrix[i][j] == 1)
                     setPoint(x + j, y + i, c);
-                }
             }
         }
     }
-    public void clear() {
-        for(int i = 0; i < matrix.length; i++) {
-            for(int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = ' ';
-            }
-        }
+
+    public void setPoint(double x, double y, char c)
+    {
+        int x0 = (int) Math.round(x);
+        int y0 = (int) Math.round(y);
+        if (y0 < 0 || y0 >= matrix.length) return;
+        if (x0 < 0 || x0 >= matrix[y0].length) return;
+
+        matrix[y0][x0] = c;
     }
-    public void print() {
-        for(int i = 0; i < matrix.length; i++) {
-            for(int j = 0; j < matrix[i].length; j++) {
-                System.out.println(matrix[i][j]);
+
+    public void print()
+    {
+        System.out.println();
+
+        for (int i = 0; i < height + 2; i++)
+        {
+            for (int j = 0; j < width + 2; j++)
+            {
+                System.out.print(" ");
+                System.out.print(matrix[i][j]);
+                System.out.print(" ");
             }
+
             System.out.println();
         }
+
         System.out.println();
         System.out.println();
+        System.out.println();
+    }
+
+    public int getWidth()
+    {
+        return width;
+    }
+
+    public int getHeight()
+    {
+        return height;
+    }
+
+    public char[][] getMatrix()
+    {
+        return matrix;
     }
 }
