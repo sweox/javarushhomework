@@ -17,27 +17,21 @@ public class Space {
         this.width = width;
         this.height = height;
     }
-
     public int getWidth() {
         return width;
     }
-
     public int getHeight() {
         return height;
     }
-
     public SpaceShip getShip() {
         return ship;
     }
-
     public ArrayList<Ufo> getUfos() {
         return ufos;
     }
-
     public ArrayList<Rocket> getRockets() {
         return rockets;
     }
-
     public ArrayList<Bomb> getBombs() {
         return bombs;
     }
@@ -45,6 +39,10 @@ public class Space {
     public void setShip(SpaceShip ship) {
         this.ship = ship;
     }
+
+    public void run() {}
+    public void draw() {}
+    public void sleep(int ms) {}
 
     public static void main(String[] args) {
 
