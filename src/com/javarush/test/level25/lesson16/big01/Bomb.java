@@ -1,16 +1,30 @@
 package com.javarush.test.level25.lesson16.big01;
 
 /**
- * Created by BELSHINA on 08.12.2016.
+ * Класс для бомбы.
  */
-public class Bomb extends BaseObject {
-    public Bomb(double x, double y) {
+public class Bomb extends BaseObject
+{
+    public Bomb(double x, double y)
+    {
         super(x, y, 1);
     }
-    public void move() {
-        ++y;
+
+    /**
+     * Отрисовываем себя на холсте.
+     */
+    @Override
+    public void draw(Canvas canvas)
+    {
+        canvas.setPoint(x,y,'B');
     }
-    public void draw(Canvas canvas) {
-        canvas.setPoint(x, y, 'B');
+
+    /**
+     * Двигаем себя вниз на один ход.
+     */
+    @Override
+    public void move()
+    {
+        y++;
     }
 }
