@@ -21,4 +21,29 @@ public class ConsoleHelper {
         return strReturn;
     }
 
+    public static String askCurrencyCode() {
+        String curCode = "";
+        System.out.println("Введите код валюты");
+        try {
+            while((curCode = reader.readLine()).length() != 3) {
+                System.out.println("Неверно введены данные");
+            }
+        }
+        catch (IOException e) {}
+        return curCode.toUpperCase();
+    }
+
+    public static String[] getValidTwoDigits(String currencyCode) {
+        String[] arrCurrency = null;
+        System.out.println("Введите два целых положительных числа.\n" +
+                "Первое число - номинал, второе - количество банкнот");
+        try {
+            while ((arrCurrency = reader.readLine().split(" ")).length != 2) {
+                System.out.println("Неверно введены данные");
+            }
+        }
+        catch(IOException e) {}
+        return arrCurrency;
+    }
+
 }
