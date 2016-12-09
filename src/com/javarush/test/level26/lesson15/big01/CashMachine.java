@@ -8,8 +8,11 @@ import java.util.Locale;
  */
 public class CashMachine {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.ENGLISH);
-        //System.out.println(ConsoleHelper.askCurrencyCode());
-        //System.out.println(Arrays.toString(ConsoleHelper.getValidTwoDigits(ConsoleHelper.askCurrencyCode())));
+//        Locale.setDefault(Locale.ENGLISH);
+//        String currencyCod = ConsoleHelper.askCurrencyCode();
+//        String[] twoIntFromConsole = ConsoleHelper.getValidTwoDigits(currencyCod);
+//        CurrencyManipulator currencyManipulator = new CurrencyManipulator(currencyCod);
+//        currencyManipulator.addAmount(Integer.parseInt(twoIntFromConsole[0]), Integer.parseInt(twoIntFromConsole[1]));
+//        System.out.println(currencyManipulator.getTotalAmount());
     }
 }

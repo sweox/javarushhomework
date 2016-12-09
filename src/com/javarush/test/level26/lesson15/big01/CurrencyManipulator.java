@@ -18,6 +18,16 @@ public class CurrencyManipulator {
         return currencyCode;
     }
 
+    public int getTotalAmount() {
+        int totalReturn = 0;
+        for(Map.Entry<Integer, Integer> in: denominations.entrySet()) {
+            if(!denominations.isEmpty() && in != null) {
+                totalReturn += in.getKey() * in.getValue();
+            }
+        }
+        return totalReturn;
+    }
+
     public void addAmount(int denomination, int count) {
         if(denominations.containsKey(denomination)) {
             denominations.put(denomination, denominations.get(denomination) + count);
