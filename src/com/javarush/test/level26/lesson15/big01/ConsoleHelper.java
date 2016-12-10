@@ -46,4 +46,18 @@ public class ConsoleHelper {
         return arrCurrency;
     }
 
+    public static Operation askOperation() {
+        Operation operationReturn = null;
+        while(true) {
+            System.out.println("Выберите операцию: 1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT");
+            try {
+                operationReturn = Operation.getAllowableOperationByOrdinal(Integer.parseInt(reader.readLine()));
+                break;
+            }
+            catch(IllegalArgumentException e) {System.out.println("Неверно введены данные");}
+            catch (IOException e) {}
+        }
+        return operationReturn;
+    }
+
 }

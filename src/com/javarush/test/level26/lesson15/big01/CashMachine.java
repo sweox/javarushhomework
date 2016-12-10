@@ -14,5 +14,8 @@ public class CashMachine {
 //        CurrencyManipulator currencyManipulator = new CurrencyManipulator(currencyCod);
 //        currencyManipulator.addAmount(Integer.parseInt(twoIntFromConsole[0]), Integer.parseInt(twoIntFromConsole[1]));
 //        System.out.println(currencyManipulator.getTotalAmount());
+        //System.out.println(Operation.getAllowableOperationByOrdinal(4));
+
+        System.out.println(ConsoleHelper.askOperation());
     }
 }
