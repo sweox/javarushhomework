@@ -16,6 +16,6 @@ public class CashMachine {
 //        System.out.println(currencyManipulator.getTotalAmount());
         //System.out.println(Operation.getAllowableOperationByOrdinal(4));
 
-        System.out.println(ConsoleHelper.askOperation());
+        //System.out.println(ConsoleHelper.askOperation());
     }
 }
