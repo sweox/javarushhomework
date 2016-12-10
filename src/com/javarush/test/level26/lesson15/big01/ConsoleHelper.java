@@ -55,7 +55,7 @@ public class ConsoleHelper {
                 break;
             }
             catch(IllegalArgumentException e) {System.out.println("Неверно введены данные");}
-            catch (IOException e) {}
+            catch (IOException e) { }
         }
         return operationReturn;
     }
