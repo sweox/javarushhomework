@@ -1,5 +1,7 @@
 package com.javarush.test.level26.lesson15.big01;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 /**
@@ -19,4 +21,5 @@ public final class CurrencyManipulatorFactory {
             return manipulator;
         }
     }
+
 }
