@@ -12,12 +12,14 @@ import java.util.Collection;
 class InfoCommand implements Command {
     public void execute() {
         Collection<CurrencyManipulator> collection = CurrencyManipulatorFactory.getAllCurrencyManipulators();
+        if(collection.size() == 0 || collection.isEmpty())
+            ConsoleHelper.writeMessage("No money available.");
         for(CurrencyManipulator c:collection) {
-            if(c.getTotalAmount() == 0) {
-                ConsoleHelper.writeMessage("No money available.");
+            if(c.hasMoney()) {
+                ConsoleHelper.writeMessage(c.getCurrencyCode() + " - " + c.getTotalAmount());
             }
             else
-                ConsoleHelper.writeMessage(c.getCurrencyCode() + " - " + c.getTotalAmount());
+                ConsoleHelper.writeMessage("No money available.");
         }
     }
 }

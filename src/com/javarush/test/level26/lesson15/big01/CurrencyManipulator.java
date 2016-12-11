@@ -35,4 +35,7 @@ public class CurrencyManipulator {
         else
             denominations.put(denomination, count);
     }
+    public boolean hasMoney() {
+        return denominations.size() != 0;
+    }
 }
