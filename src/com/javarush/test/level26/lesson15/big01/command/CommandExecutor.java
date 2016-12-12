@@ -6,9 +6,6 @@ import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationExce
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by BELSHINA on 10.12.2016.
- */
 public class CommandExecutor {
     static Map<Operation, Command>  commandMap = new HashMap<>();
     private CommandExecutor() {}

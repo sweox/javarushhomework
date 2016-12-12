@@ -7,9 +7,6 @@ import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationExce
 
 import java.util.Collection;
 
-/**
- * Created by BELSHINA on 10.12.2016.
- */
 class InfoCommand implements Command {
     public void execute() throws InterruptOperationException {
         Collection<CurrencyManipulator> collection = CurrencyManipulatorFactory.getAllCurrencyManipulators();

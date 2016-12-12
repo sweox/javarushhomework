@@ -1,13 +1,8 @@
 package com.javarush.test.level26.lesson15.big01;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Map;
 
-/**
- * Created by Admin on 08.12.2016.
- */
 public final class CurrencyManipulatorFactory {
     private CurrencyManipulatorFactory() {}
     private static HashMap<String, CurrencyManipulator> manipulatorHashMap = new HashMap<>();
