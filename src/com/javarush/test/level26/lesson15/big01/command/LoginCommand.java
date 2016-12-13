@@ -3,6 +3,8 @@ package com.javarush.test.level26.lesson15.big01.command;
 import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationException;
 
+import java.util.ResourceBundle;
+
 
 /**
  * Created by BELSHINA on 13.12.2016.
@@ -10,6 +12,9 @@ import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationExce
 public class LoginCommand implements Command {
     private String cardNumber = "123456789012";
     private String pinCode = "1234";
+
+    private ResourceBundle validCreditCards
+            = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.verifiedCards");
     public void execute() throws InterruptOperationException {
         String cardNumberReader;
         String pinCodeReader = "";
@@ -18,7 +23,8 @@ public class LoginCommand implements Command {
             cardNumberReader = ConsoleHelper.readString();
             ConsoleHelper.writeMessage("Введите PIN-код");
             pinCodeReader = ConsoleHelper.readString();
-            if(cardNumberReader.equals(cardNumber) && pinCodeReader.equals(pinCode)) {
+            if(validCreditCards.containsKey(cardNumberReader)
+                    && validCreditCards.getString(cardNumberReader).equals(pinCodeReader)) {
                 ConsoleHelper.writeMessage("Поздравляем, данные введены верно");
                 break;
             }
@@ -27,4 +33,6 @@ public class LoginCommand implements Command {
             }
         }
     }
+
+
 }
