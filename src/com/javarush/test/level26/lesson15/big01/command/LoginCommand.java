@@ -11,7 +11,7 @@ public class LoginCommand implements Command {
     private String cardNumber = "123456789012";
     private String pinCode = "1234";
     public void execute() throws InterruptOperationException {
-        String cardNumberReader = "";
+        String cardNumberReader;
         String pinCodeReader = "";
         while(true) {
             ConsoleHelper.writeMessage("Введите номер кредитной карты");
