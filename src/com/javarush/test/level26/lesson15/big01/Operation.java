@@ -1,6 +1,7 @@
 package com.javarush.test.level26.lesson15.big01;
 
 public enum Operation {
+    LOGIN,
     INFO,
     DEPOSIT,
     WITHDRAW,
@@ -9,12 +10,12 @@ public enum Operation {
     public static Operation getAllowableOperationByOrdinal(Integer i) throws IllegalArgumentException {
 
         int[] realOrder = new int[values().length];
-        int checkI = i - 1;
-        if(checkI < 0 || checkI >= realOrder.length) {
+        int checkI = i;
+        if(checkI <= 0 || checkI >= realOrder.length) {
             throw new IllegalArgumentException();
         }
         else {
-            return values()[i - 1];
+            return values()[i];
         }
     }
 }

@@ -14,9 +14,13 @@ public class CommandExecutor {
         commandMap.put(Operation.DEPOSIT, new DepositCommand());
         commandMap.put(Operation.WITHDRAW, new WithdrawCommand());
         commandMap.put(Operation.EXIT, new ExitCommand());
+        commandMap.put(Operation.LOGIN, new LoginCommand());
     }
     public static final void execute(Operation operation) throws InterruptOperationException {
         switch(operation) {
+            case LOGIN:
+                commandMap.get(Operation.LOGIN).execute();
+                break;
             case INFO:
                 commandMap.get(Operation.INFO).execute();
                 break;
