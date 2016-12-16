@@ -23,7 +23,7 @@ public class CashMachine {
             }
             catch (InterruptOperationException e1) {
             }
-            ConsoleHelper.writeMessage("До свидания из main!");
+            ConsoleHelper.printExitMessage();
         }
     }
 }

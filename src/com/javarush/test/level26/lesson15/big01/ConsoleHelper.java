@@ -5,12 +5,16 @@ import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationExce
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ResourceBundle;
 
 public class ConsoleHelper {
+    private static final ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common_en");
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
     public static void writeMessage(String message) {
         System.out.println(message);
     }
+
     public static String readString() throws InterruptOperationException {
         String strReturn = "";
         try {
@@ -26,10 +30,10 @@ public class ConsoleHelper {
 
     public static String askCurrencyCode() throws InterruptOperationException {
         String curCode = "";
-        System.out.println("Введите код валюты");
+        ConsoleHelper.writeMessage(res.getString("choose.currency.code"));
         try {
             while((curCode = reader.readLine()).length() != 3) {
-                System.out.println("Неверно введены данные");
+                ConsoleHelper.writeMessage(res.getString("invalid.data"));
             }
         }
         catch (IOException e) {}
@@ -38,11 +42,10 @@ public class ConsoleHelper {
 
     public static String[] getValidTwoDigits(String currencyCode) throws InterruptOperationException {
         String[] arrCurrency = null;
-        System.out.println("Введите два целых положительных числа.\n" +
-                "Первое число - номинал, второе - количество банкнот");
+        ConsoleHelper.writeMessage(res.getString("choose.denomination.and.count.format"));
 
         while ((arrCurrency = readString().split(" ")).length != 2) {
-            System.out.println("Неверно введены данные");
+            ConsoleHelper.writeMessage(res.getString("invalid.data"));
         }
         return arrCurrency;
     }
@@ -50,14 +53,25 @@ public class ConsoleHelper {
     public static Operation askOperation() throws InterruptOperationException {
         Operation operationReturn = null;
         while(true) {
-            System.out.println("Выберите операцию: 1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT");
+            ConsoleHelper.writeMessage(res.getString("choose.operation"));
+            ConsoleHelper.writeMessage("1 - " +res.getString("operation.INFO"));
+            ConsoleHelper.writeMessage("2 - " +res.getString("operation.DEPOSIT"));
+            ConsoleHelper.writeMessage("3 - " +res.getString("operation.WITHDRAW"));
+            ConsoleHelper.writeMessage("4 - " +res.getString("operation.EXIT"));
             try {
                 operationReturn = Operation.getAllowableOperationByOrdinal(Integer.parseInt(readString()));
                 break;
             }
-            catch(IllegalArgumentException e) {System.out.println("Неверно введены данные");}
+            catch(IllegalArgumentException e) {
+                ConsoleHelper.writeMessage(res.getString("invalid.data"));
+            }
         }
         return operationReturn;
+    }
+
+    public static void printExitMessage() {
+
+        ConsoleHelper.writeMessage(res.getString("the.end"));
     }
 
 }
