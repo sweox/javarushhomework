@@ -1,5 +1,6 @@
 package com.javarush.test.level26.lesson15.big01.command;
 
+import com.javarush.test.level26.lesson15.big01.CashMachine;
 import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationException;
 
@@ -14,7 +15,7 @@ public class LoginCommand implements Command {
     private String pinCode = "1234";
 
     private ResourceBundle validCreditCards
-            = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.verifiedCards");
+            = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "verifiedCards");
 
     private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.login_en");
 

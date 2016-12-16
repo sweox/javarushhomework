@@ -8,7 +8,8 @@ import java.io.InputStreamReader;
 import java.util.ResourceBundle;
 
 public class ConsoleHelper {
-    private static final ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common_en");
+    private static final ResourceBundle res =
+            ResourceBundle.getBundle(CashMachine.RESOURCE_PATH + "common_en");
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message) {
