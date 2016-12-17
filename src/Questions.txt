@@ -473,6 +473,9 @@ http://pastebin.com/defTeiej
 
 Backing a ResourceBundle with Properties Files
 http://docs.oracle.com/javase/tutorial/i18n/resbundle/propfile.html
+
+Вавилонское столпотворение. Часть 2. Локализация и ресурсы
+http://www.skipy.ru/technics/localization.html
 ============================================================
     level27.lesson02.task02
 Разобраться с вложенными циклами
