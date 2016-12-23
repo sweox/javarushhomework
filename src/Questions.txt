@@ -535,7 +535,33 @@ http://digteh.ru/proc/float/
 ==============================================
     level30.lesson08.task01
 Интересная задача по битам и сдвигам.
+----------------------------------
+    level30.lesson08.home01
+Магические аолгоритмы на булевой алгебре
 
+The Aggregate Magic Algorithms
+http://aggregate.org/MAGIC/
+
+What does the ^ operator do in Java?
+http://stackoverflow.com/questions/1991380/what-does-the-operator-do-in-java
+
+Операции над примитивными типами в Java
+http://info.javarush.ru/javarush_articles/2015/12/03/Операции-над-примитивными-типами-в-Java.html
+
+Arithmetic shift
+https://en.wikipedia.org/wiki/Arithmetic_shift
+
+Даны две переменные - a и b. Например, они равны a=2; b=3. Необходимо поменять местами
+эти числа (то есть a=3, b=2). Но не используя третью переменную.
+1.
+a = a + b;
+b = a - b;
+a = a - b;
+2.
+a = a ^ b;
+b = b ^ a;
+a = a ^ b;
+---------------------------------------------------------
 
 
 
