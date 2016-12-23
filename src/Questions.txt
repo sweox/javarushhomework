@@ -460,6 +460,11 @@ https://habrahabr.ru/post/128017/#putForNullKey
     level26.lesson10.task01
 http://pastebin.com/defTeiej
 ------------------------------------------
+    level26.lesson10.home02
+Про interrupted в цикле и try - catch
+http://info.javarush.ru/others/2016/06/21/Прерывания-работы-нити-interrupte-thread-.html
+
+----------------------------------------------
     level26.lesson15.big01
 Разобраться с жадным алгоритмом!!!!!!!
 Так же алгоритм не выводит минимальное количество банкнот для операции, н-р при сумме 600.
