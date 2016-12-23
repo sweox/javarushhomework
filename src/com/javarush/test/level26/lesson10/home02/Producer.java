@@ -25,6 +25,7 @@ public class Producer implements Runnable {
         }
         catch(InterruptedException e) {
             System.out.printf("[%s] thread was terminated", Thread.currentThread().getName());
+            //Thread.currentThread().interrupt();
         }
     }
 }

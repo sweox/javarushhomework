@@ -462,8 +462,12 @@ http://pastebin.com/defTeiej
 ------------------------------------------
     level26.lesson10.home02
 Про interrupted в цикле и try - catch
+
+Прерывания работы нити (interrupte thread)
 http://info.javarush.ru/others/2016/06/21/Прерывания-работы-нити-interrupte-thread-.html
 
+Теория и практика Java: Работа с InterruptedException
+http://www.ibm.com/developerworks/ru/library/j-jtp05236/index.html
 ----------------------------------------------
     level26.lesson15.big01
 Разобраться с жадным алгоритмом!!!!!!!
