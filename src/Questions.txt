@@ -562,7 +562,14 @@ a = a ^ b;
 b = b ^ a;
 a = a ^ b;
 ---------------------------------------------------------
-
+    level31.lesson02.home02
+Интересная задача про поиск файлов через очередь (queue).
+Пишем очередь на Java
+http://javadevblog.com/pishem-ochered-na-java.html
+Пишем стек на java
+http://javadevblog.com/pishem-stek-na-java.html
+How do I instantiate a Queue object in java?
+http://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-in-java
 
 
 
