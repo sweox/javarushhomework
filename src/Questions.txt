@@ -561,7 +561,7 @@ a = a - b;
 a = a ^ b;
 b = b ^ a;
 a = a ^ b;
----------------------------------------------------------
+==============================================================
     level31.lesson02.home02
 Интересная задача про поиск файлов через очередь (queue).
 Пишем очередь на Java
@@ -570,6 +570,15 @@ http://javadevblog.com/pishem-ochered-na-java.html
 http://javadevblog.com/pishem-stek-na-java.html
 How do I instantiate a Queue object in java?
 http://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-in-java
+------------------------------------------------------------
+    level31.lesson04.home01
+Про варарг vararg varargs var-args
+Баг в Java Var-arg Overloading
+http://ru.stackoverflow.com/questions/190690/java-var-arg-overloading
+Java : Methods with Variable Argument Lists (var-args)
+http://www.javaxp.com/2011/04/java-methods-with-variable-argument.html
+
+
 
 
 
