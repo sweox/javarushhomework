@@ -577,6 +577,9 @@ http://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-i
 http://ru.stackoverflow.com/questions/190690/java-var-arg-overloading
 Java : Methods with Variable Argument Lists (var-args)
 http://www.javaxp.com/2011/04/java-methods-with-variable-argument.html
+When do you use varargs in Java?
+http://stackoverflow.com/questions/766559/when-do-you-use-varargs-in-java
+
 
 
 
