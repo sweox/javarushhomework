@@ -573,6 +573,9 @@ http://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-i
 ------------------------------------------------------------
     level31.lesson04.home01
 
+NIO (Java, обучающая статья)
+http://www.quizful.net/post/java-nio-tutorial
+
 Files является служебным классом, это означает, что это final-класс с private-конструктором и содержит только статические методы
 
 Про варарг vararg varargs var-args
