@@ -587,8 +587,20 @@ When do you use varargs in Java?
 http://stackoverflow.com/questions/766559/when-do-you-use-varargs-in-java
 ----------------------------------------------------------------
     level31.lesson04.home02
+Интересная задача про поиск файлов в каталоге через walkFileTree SimpleFileVisitor
+Walking the File Tree
+https://docs.oracle.com/javase/tutorial/essential/io/walk.html
 NIO (Java, обучающая статья)
 http://www.quizful.net/post/java-nio-tutorial
+
+Path walkFileTree(Path start, FileVisitor<!--? super Path--> visitor)
+Path walkFileTree(Path start, Set<filevisitoption> options, int maxDepth, FileVisitor<!--? super Path--> visitor)
+Оба метода принимают путь, с которого начнётся обход дерева и экземпляр типа FileVisitor,
+который будет определять поведение при обходе дерева. Второй метод имеет два дополнительных
+параметра: Set, содержащий опции обхода, и максимальную глубину. Максимальная глубина
+определяет, насколько уровней каталогов будет происходить обход. Если в её качестве указать 0,
+то будет рассматриваться только указанный файл, а если указать MAX_VALUE, то будут пройдены
+все подкаталоги.
 
 
 
