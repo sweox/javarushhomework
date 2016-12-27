@@ -585,6 +585,10 @@ Java : Methods with Variable Argument Lists (var-args)
 http://www.javaxp.com/2011/04/java-methods-with-variable-argument.html
 When do you use varargs in Java?
 http://stackoverflow.com/questions/766559/when-do-you-use-varargs-in-java
+----------------------------------------------------------------
+    level31.lesson04.home02
+NIO (Java, обучающая статья)
+http://www.quizful.net/post/java-nio-tutorial
 
 
 
