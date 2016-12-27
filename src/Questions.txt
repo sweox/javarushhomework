@@ -572,6 +572,9 @@ How do I instantiate a Queue object in java?
 http://stackoverflow.com/questions/4626812/how-do-i-instantiate-a-queue-object-in-java
 ------------------------------------------------------------
     level31.lesson04.home01
+
+Files является служебным классом, это означает, что это final-класс с private-конструктором и содержит только статические методы
+
 Про варарг vararg varargs var-args
 Баг в Java Var-arg Overloading
 http://ru.stackoverflow.com/questions/190690/java-var-arg-overloading
