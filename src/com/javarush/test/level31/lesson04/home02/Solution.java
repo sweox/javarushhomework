@@ -21,7 +21,7 @@ public class Solution extends SimpleFileVisitor<Path> {
     public static void main(String[] args) throws IOException {
         EnumSet<FileVisitOption> options = EnumSet.of(FileVisitOption.FOLLOW_LINKS);
         final Solution solution = new Solution();
-        Files.walkFileTree(Paths.get("d:/DOCUMENTATION/!!! АТТЕСТАЦИЯ 2015!!!/"), options, 20, solution);
+        Files.walkFileTree(Paths.get("c:/"), options, 20, solution);
 
         List<String> result = solution.getArchived();
         System.out.println("All archived files:");
@@ -50,12 +50,16 @@ public class Solution extends SimpleFileVisitor<Path> {
 
     @Override
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+        if(file.getFileName().toString().endsWith(".rar") || file.getFileName().toString().endsWith(".zip")) {
+            archived.add(file.toFile().getAbsolutePath());
+        }
         return super.visitFile(file, attrs);
     }
 
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
-        return super.visitFileFailed(file, exc);
+        failed.add(file.toFile().getAbsolutePath());
+        return FileVisitResult.SKIP_SUBTREE;
     }
 }
 
