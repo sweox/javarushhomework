@@ -35,8 +35,8 @@ public class Solution {
     public static Map<ZipEntry, ByteArrayOutputStream> map = new HashMap<>();
 
     public static void main(String[] args) throws IOException {
-        File fileName = /*new File(args[0])*/ new File("c:/1/result.mp3");
-        File zip = /*new File(args[1])*/ new File("C:/1/pathToTest/test.zip");
+        File fileName = new File(args[0]) /*new File("c:/1/result.mp3")*/;
+        File zip = new File(args[1]) /*new File("C:/1/pathToTest/test.zip")*/;
 
         readZip(zip);
         writeZip(fileName, zip);
@@ -72,10 +72,18 @@ public class Solution {
         try(ZipOutputStream zipOutputStream = new ZipOutputStream(new FileOutputStream(zip));
             FileInputStream fileInputStream = new FileInputStream(fileName)) {
             for(Map.Entry<ZipEntry, ByteArrayOutputStream> f:map.entrySet()) {
-                ZipEntry tmp = new ZipEntry(f.getKey().getName());
-                System.out.println(f.getKey());
-                zipOutputStream.putNextEntry(tmp);
-                zipOutputStream.write(f.getValue().toByteArray());
+                if(f.getKey().getName().equals(fileName.getName()))  {
+//                    System.out.println(f.getKey().getName());
+//                    System.out.println(fileName.getName());
+                    ZipEntry tmp = new ZipEntry("/new/" + f.getKey().getName());
+                    zipOutputStream.putNextEntry(tmp);
+                    zipOutputStream.write(f.getValue().toByteArray());
+                }
+                else {
+                    ZipEntry tmp = new ZipEntry(f.getKey().getName());
+                    zipOutputStream.putNextEntry(tmp);
+                    zipOutputStream.write(f.getValue().toByteArray());
+                }
             }
 
             zipOutputStream.putNextEntry(new ZipEntry(fileName.getName()));
