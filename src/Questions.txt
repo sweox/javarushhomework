@@ -601,6 +601,13 @@ Path walkFileTree(Path start, Set<filevisitoption> options, int maxDepth, FileVi
 определяет, насколько уровней каталогов будет происходить обход. Если в её качестве указать 0,
 то будет рассматриваться только указанный файл, а если указать MAX_VALUE, то будут пройдены
 все подкаталоги.
+-----------------------------------------------------------
+    level31.lesson06.home01;
+Полезная задача про ZipEntry . Напомнило про OutputStream, InputStream .
+Работа с ZIP-архивами
+http://metanit.com/java/tutorial/6.12.php
+How to compress files in ZIP format
+https://www.mkyong.com/java/how-to-compress-files-in-zip-format/
 
 
 
