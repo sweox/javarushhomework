@@ -613,6 +613,13 @@ https://www.mkyong.com/java/how-to-compress-files-in-zip-format/
 С использованием SequenceInputStream задача получается красивее.
 --------------------------------------------------------
 
+Паттерн NullObject
+Почему NULL - это плохо?
+http://info.javarush.ru/translation/2015/02/27/Почему-NULL-это-плохо-.html
+Why NULL is Bad?
+http://www.yegor256.com/2014/05/13/why-null-is-bad.html
+
+
 
 
 
