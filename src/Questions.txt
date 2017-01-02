@@ -608,6 +608,10 @@ Path walkFileTree(Path start, Set<filevisitoption> options, int maxDepth, FileVi
 http://metanit.com/java/tutorial/6.12.php
 How to compress files in ZIP format
 https://www.mkyong.com/java/how-to-compress-files-in-zip-format/
+---------------------------------------------------------
+    level31.lesson06.bonus01
+С использованием SequenceInputStream задача получается красивее.
+--------------------------------------------------------
 
 
 
